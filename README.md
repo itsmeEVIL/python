@@ -1,2 +1,2 @@
 # ASK_Project
-ASK Projects for School
+This is a project for school.
