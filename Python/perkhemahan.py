@@ -1,6 +1,7 @@
 # Ralat masa larian
 # Progam Python untuk mengira jumlah kos perkhemahan unit beruniform 
 
+# Pemboleh ubah
 # Kos item-item dalam kos tetap
 # Kos kelengkapan peribadi
 peribadi = float(13.50) # Ralat ialah menggunakan fungsi float secara tidak betul # float(peribadi = 13.50)
