@@ -9,6 +9,7 @@ pakaian = float(105.90) # Ralat ialah menggunakan fungsi float secara tidak betu
 # Kos sewaan khemah
 khemah = float(12.00) # Ralat ialah menggunakan fungsi float secara tidak betul # float(khemah = 12.00)
 
+# Proses
 # Kos tetap
 kos_tetap = peribadi + pakaian + khemah
 # Kos masak
