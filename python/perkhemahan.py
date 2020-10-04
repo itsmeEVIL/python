@@ -1,3 +1,4 @@
+# Ralat masa larian
 # Progam Python untuk mengira jumlah kos perkhemahan unit beruniform 
 
 # Kos tetap

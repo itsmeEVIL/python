@@ -1,3 +1,4 @@
+# Ralat sintaks
 # Program Python untuk mengira purata ketinggian 5 ahli
 
 # Input ketinggian ahli
