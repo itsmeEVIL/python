@@ -2,12 +2,16 @@
 # Program Python untuk mengira purata ketinggian 5 ahli
 
 # Input
-# Pemboleh ubah
+# Ketinggian ahli pertama
 pertama = float(input('Ketinggian ahli pertama: '))
+# Ketinggian ahli kedua
 kedua = float(input('Ketinggian ahli kedua: '))
+# Ketinggian ahli ketiga
 ketiga = float(input('Ketinggian ahli ketiga: '))
+# Ketinggian ahli keempat
 keempat = float(input('Ketinggian ahli keempat: '))
-kelima = float(input('Ketinggian ahli kelima: '))
+# Ketinggian ahli kelima
+kelima= float(input('Ketinggian ahli kelima: '))
 
 # Proses 
 # Jumlah semua ahli
