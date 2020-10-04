@@ -27,4 +27,4 @@ print('Ahli keempat: ', keempat, 'm')
 print('Ahli kelima: ', kelima, 'm')
 
 # Purata ketinggian semua ahli
-print('\nPurata Ketinggian: ', round(purata, 2), 'm')
+print('\nPurata Ketinggian: ', round(purata, 2), 'm') # Ralat yang berlaku ialah ketiadan tanda "," sebelum fungsi round # ...Ketinggian: ' round...
