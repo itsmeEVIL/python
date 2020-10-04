@@ -2,17 +2,19 @@
 # Progam Python untuk mengira harga buku motivasi
 
 # Pemboleh ubah
+# Harga-harga buku
 # Harga buku cerita
 buku_cerita = float(39)
 # Harga majalah
 majalah = float(16)
 
 # Proses
+# Pengiraan
 # Jumlah buku cerita dan majalah
 jum1 = (buku_cerita * 2) + majalah
-# Bayaran
+# Bayaran yang dibuat
 bayaran = 200
-# Baki
+# Baki yang tinggal
 baki1 = 66
 
 # Jumlah harga semua buku
@@ -27,7 +29,7 @@ jum3 = jum1 + (2 * buku_motisasi)
 baki2 = 200 - jum3
 
 # Output
-# Bayaran
+# Bayaran yang dibuat
 print('Bayaran yang dibuat: RM200')
 # Harga 2 buku cerita
 print('\nBuku cerita: RM', 2 * buku_cerita)
