@@ -13,13 +13,18 @@ jumlah = pertama + kedua + ketiga + keempat + kelima
 # Purata ketinggian semua ahli
 purata = jumlah / 5
 
-# Print input ketinggian ahli
+# Output
 print('\nUkuran Ketinggian Yang Dimasukkan:')
+# Ketinggian ahli pertama
 print('Ahli pertama: ', pertama, 'm')
+# Ketinggian ahli kedua
 print('Ahli kedua: ', kedua, 'm')
+# Ketinggian ahli ketiga
 print('Ahli ketiga: ', ketiga, 'm')
+# Ketinggian ahli keempat
 print('Ahli keempat: ', keempat, 'm')
+# Ketinggian ahli kelima
 print('Ahli kelima: ', kelima, 'm')
 
-# Print purata semua ketinggian ahli
+# Purata ketinggian semua ahli
 print('\nPurata Ketinggian: ', round(purata, 2), 'm')

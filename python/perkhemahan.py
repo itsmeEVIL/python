@@ -1,9 +1,12 @@
 # Ralat masa larian
 # Progam Python untuk mengira jumlah kos perkhemahan unit beruniform 
 
-# Kos tetap
+# Kos item-item dalam kos tetap
+# Kos kelengkapan peribadi
 peribadi = float(13.50)
+# Kos pakaian
 pakaian = float(105.90)
+# Kos sewaan khemah
 khemah = float(12.00)
 
 # Kos tetap
