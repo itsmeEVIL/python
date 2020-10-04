@@ -15,7 +15,7 @@ kos_tetap = peribadi + pakaian + khemah
 # Kos masak
 kos_masak = float(input('\nMasukkan kos untuk barangan memasak: RM'))
 # Jumlah kos
-jumlah_kos = kos_tetap + kos_tetap
+jumlah_kos = kos_tetap + kos_masak
 
 # Output
 print('\n***Pengiraan Kos Perkhemahan Unit Beruniform***')
