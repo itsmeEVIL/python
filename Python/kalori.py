@@ -12,7 +12,7 @@ jantina = input('Adakah jantina anda lelaki? (YA atau TIDAK): ')
 if jantina == 'Ya' or jantina == 'ya' or jantina == 'YA':
 	# Input
 	# Umur
-	umur = int(input('Berapakah Umur Anda?\n'))
+	umur = int(input('Berapakah Umur Anda?'))
 
 	# Jika umur lebih atau sama dengan 60
 	if (umur >= 60):
@@ -48,7 +48,7 @@ if jantina == 'Ya' or jantina == 'ya' or jantina == 'YA':
 elif jantina == 'Tidak' or jantina == 'tidak' or jantina == 'TIDAK':
 	# Input
 	# Umur
-	umur = int(input('Berapakah Umur Anda?\n'))
+	umur = int(input('Berapakah Umur Anda?'))
 
 	# Jika umur lebih atau sama dengan 60
 	if (umur >= 60):
