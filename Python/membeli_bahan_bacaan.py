@@ -1,5 +1,5 @@
 # Ralat logik
-# Progam Python untuk mengira harga buku motivasi
+# Progam Python untuk mengira harga buku
 
 # Pemboleh ubah
 # Harga-harga buku
@@ -9,7 +9,6 @@ buku_cerita = float(39)
 majalah = float(16)
 
 # Proses
-# Pengiraan
 # Jumlah buku cerita dan majalah
 jum1 = (buku_cerita * 2) + majalah
 # Bayaran yang dibuat

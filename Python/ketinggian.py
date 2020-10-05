@@ -13,8 +13,8 @@ keempat = float(input('Ketinggian ahli keempat: '))
 # Ketinggian ahli kelima
 kelima= float(input('Ketinggian ahli kelima: '))
 
-# Proses 
-# Jumlah semua ahli
+# Proses
+# Jumlah ketinggian semua ahli
 jumlah = pertama + kedua + ketiga + keempat + kelima
 # Purata ketinggian semua ahli
 purata = jumlah / 5
