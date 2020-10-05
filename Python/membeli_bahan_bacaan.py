@@ -1,5 +1,4 @@
-# Ralat logik
-# Progam Python untuk mengira harga buku
+# Atur cara untuk mengira harga buku
 
 # Pemboleh ubah
 # Harga-harga buku
@@ -19,7 +18,7 @@ baki1 = 66
 # Jumlah harga semua buku
 jumlah_buku = bayaran - baki1
 # Harga senaskah buku motivasi
-buku_motisasi = (jumlah_buku - jum1) / 2 # Ralat ialah tiada tanda kurungan yang menyebabkan pengiraan tidak tepat # buku_motivasi = jum_buku - jumlah_buku / 2
+buku_motisasi = (jumlah_buku - jum1) / 2
 
 # Semakan Pengiraan
 # Jumlah harga semua buku

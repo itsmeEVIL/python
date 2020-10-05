@@ -1,4 +1,4 @@
-# Pogram Python untuk mengetahui jumlah kalori yang dibenarkan berdasarkan jantina dan umur
+# Atur cara untuk mengetahui jumlah kalori yang dibenarkan berdasarkan jantina dan umur
 
 print('***CADANGKAN JUMLAH KALORI YANG DIBERNARKAN BERDASARKAN JANTINA DAN UMUR***')
 
@@ -78,4 +78,3 @@ elif jantina == 'Tidak' or jantina == 'tidak' or jantina == 'TIDAK':
 # Jika jantina bukan lelaki atau perempuan
 else:
 	print('Terima Kasih')
-	

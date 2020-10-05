@@ -1,4 +1,3 @@
-# Ralat sintaks
 # Program Python untuk mengira purata ketinggian 5 ahli
 
 # Input
@@ -32,4 +31,4 @@ print('Ahli keempat: ', keempat, 'm')
 # Ketinggian ahli kelima
 print('Ahli kelima: ', kelima, 'm')
 # Purata ketinggian semua ahli
-print('\nPurata Ketinggian: ', round(purata, 2), 'm') # Ralat yang berlaku ialah ketiadan tanda "," sebelum fungsi round # ...Ketinggian: ' round...
+print('\nPurata Ketinggian: ', round(purata, 2), 'm')
