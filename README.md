@@ -1,5 +1,2 @@
-# Project ASK
-*NOTE: ASK is a shortened word for Asas Sains Komputer, which in english means Basics of Computer Science.*
-
-## What is this for?
-This a project for school. We have to solves the problems given in the textbook.
+# Python
+This is a collection of python programs that made while learning it.
