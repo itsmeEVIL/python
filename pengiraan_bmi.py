@@ -19,7 +19,7 @@ if tinggi != "" and berat != "":
 	bmi = berat / (tinggi * tinggi)
 
 	# Output
-	print("\nBMI Anda: ", round(bmi, 2), "\nDan Anda: ", end="")
+	print("\nBMI Anda:", round(bmi, 2), "\nDan Anda:", end=" ")
 
 	# Jika bmi kurang daripada 18.5
 	if bmi < 18.5:
