@@ -7,8 +7,8 @@ print("***Atur Cara Untuk Mengira BMI Anda***\n")
 tinggi = input("Masukkan ketinggian anda (Meter): ")
 berat = input("Masukkan berat badan anda (KG): ")
 
-# Jika tinggi atau berat tidak kosong
-if tinggi or berat != "":
+# Jika input tinggi dan berat tidak kosong
+if tinggi != "" and berat != "":
   
 	# Proses
 	# Tukar string kepada nombor
@@ -36,6 +36,14 @@ if tinggi or berat != "":
 	elif (bmi >= 30.0):
 		print("Obesiti")
 
-# Jika tinggi atau berat kosong
+# Jika input tinggi tidak kosong dan berat kosong
+elif tinggi != "" and berat == "":
+  print("ERROR:\nMasukkan Ketinggian Dan Berat Dengan Betul!")
+
+# Jika input tinggi kosong dan berat tidak kosong
+elif tinggi == "" and berat != "":
+  print("ERROR:\nMasukkan Ketinggian Dan Berat Dengan Betul!")
+
+# Jika tinggi dan berat kosong
 else:
 	print("ERROR:\nMasukkan Ketinggian Dan Berat Dengan Betul!")
