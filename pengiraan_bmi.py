@@ -23,28 +23,35 @@ if tinggi != "" and berat != "":
 
 	# Jika bmi kurang daripada 18.5
 	if bmi < 18.5:
+	  # Output
 		print("Kurang Berat Badan")
 
 	# Jika bmi lebih atau sama dengan 18.5 dan kurang daripada 24.9
 	elif bmi >= 18.5 and bmi < 24.9:
+	  # Output
 		print("Berat Badan Normal")
 
 	# Jika bmi lebih atau sama dengan 25.0 dan kurang daripada 29.9
 	elif bmi >= 25.0 and bmi < 29.9:
+	  # Output
 		print("Lebih Berat Badan")
 
 	# Jika bmi lebih atau sama dengan 30.0
 	elif bmi >= 30.0:
+	  # Output
 		print("Obesiti")
 
 # Jika input tinggi tidak kosong dan berat kosong
 elif tinggi != "" and berat == "":
+  # Output
   print("ERROR:\nMasukkan Berat Badan Anda Dengan Betul!")
 
 # Jika input tinggi kosong dan berat tidak kosong
 elif tinggi == "" and berat != "":
+  # Output
   print("ERROR:\nMasukkan Ketinggian Anda Dengan Betul!")
 
 # Jika tinggi dan berat kosong
 else:
+  # Output
   print("ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda Dengan Betul!")
