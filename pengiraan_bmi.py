@@ -9,9 +9,13 @@ berat = input("Masukkan berat badan anda (KG): ")
 
 # Jika tinggi atau berat tidak kosong
 if tinggi or berat != "":
+  
 	# Proses
+	# Tukar string kepada nombor
+	berat = float(berat)
+	tinggi = float(tinggi)
 	# Formula untuk mengira BMI - berat × tinggi^2
-	bmi = float(berat) / (float(tinggi) * float(tinggi))
+	bmi = berat / (tinggi * tinggi)
 
 	# Output
 	print("\nBMI Anda: ", round(bmi, 2), "\nDan Anda: ", end="")
