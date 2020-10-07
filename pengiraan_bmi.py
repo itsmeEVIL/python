@@ -8,7 +8,7 @@ tinggi = input("Masukkan ketinggian anda (Meter): ")
 berat = input("Masukkan berat badan anda (KG): ")
 
 # Jika tinggi atau berat tidak kosong
-if tinggi or berat is not "":
+if tinggi or berat != "":
 	# Proses
 	# Formula untuk mengira BMI - berat × tinggi^2
 	bmi = float(berat) / (float(tinggi) * float(tinggi))
