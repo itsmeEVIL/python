@@ -8,7 +8,7 @@ tinggi = input("Masukkan ketinggian anda (Meter): ")
 berat = input("Masukkan berat badan anda (KG): ")
 
 # Note - != bermaksud tidak sama dengan
-# Jika input tinggi dan berat tidak kosong
+# Jika input tinggi tidak sama dengan "" dan berat tidak sama dengan ""
 if tinggi != "" and berat != "":
   
 	# Proses
@@ -41,15 +41,15 @@ if tinggi != "" and berat != "":
 	  # Output
 		print("Obesiti")
 
-# Jika input tinggi tidak kosong dan berat kosong
+# Jika input tinggi tidak sama dengan "" dan berat sama dengan ""
 elif tinggi != "" and berat == "":
   	# Output
- 	print("ERROR:\nMasukkan Berat Badan Anda Dengan Betul!")
+ 	print("ERROR:\nMasukkan Berat Badan Anda!")
 
-# Jika input tinggi kosong dan berat tidak kosong
+# Jika input tinggi sama dengan "" dan berat tidak sama dengan ""
 elif tinggi == "" and berat != "":
   	# Output
-  	print("ERROR:\nMasukkan Ketinggian Anda Dengan Betul!")
+  	print("ERROR:\nMasukkan Ketinggian Anda!")
 
 # Jika tinggi dan berat kosong
 else:
