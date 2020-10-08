@@ -43,15 +43,15 @@ if tinggi != "" and berat != "":
 
 # Jika input tinggi tidak kosong dan berat kosong
 elif tinggi != "" and berat == "":
-  # Output
-  print("ERROR:\nMasukkan Berat Badan Anda Dengan Betul!")
+  	# Output
+ 	print("ERROR:\nMasukkan Berat Badan Anda Dengan Betul!")
 
 # Jika input tinggi kosong dan berat tidak kosong
 elif tinggi == "" and berat != "":
-  # Output
-  print("ERROR:\nMasukkan Ketinggian Anda Dengan Betul!")
+  	# Output
+  	print("ERROR:\nMasukkan Ketinggian Anda Dengan Betul!")
 
 # Jika tinggi dan berat kosong
 else:
-  # Output
-  print("ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda Dengan Betul!")
+  	# Output
+  	print("ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda Dengan Betul!")
