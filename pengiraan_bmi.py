@@ -54,4 +54,4 @@ elif tinggi == "" and berat != "":
 # Jika tinggi dan berat kosong
 else:
   	# Output
-  	print("ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda Dengan Betul!")
+  	print("ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda!")
