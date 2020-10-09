@@ -8,7 +8,7 @@ tinggi = input("Masukkan ketinggian anda (Meter): ")
 berat = input("Masukkan berat badan anda (KG): ")
 
 # Note - != bermaksud tidak sama dengan
-# Jika input tinggi tidak sama dengan "" dan berat tidak sama dengan ""
+# Jika input tinggi dan berat tidak kosong
 if tinggi != "" and berat != "":
   
 	# Proses
@@ -17,9 +17,11 @@ if tinggi != "" and berat != "":
 	tinggi = float(tinggi)
 	# Formula untuk mengira BMI - berat ÷ tinggi^2
 	bmi = berat / (tinggi * tinggi)
+	# Bundarkan bmi kepada 2 tempat perpuluhan
+	bmi = round(bmi, 2)
 
 	# Output
-	print("\nBMI Anda:", round(bmi, 2), "\nDan Anda:", end=" ")
+	print("\nBMI Anda:", bmi, "\nDan Anda:", end=" ")
 
 	# Jika bmi kurang daripada 18.5
 	if bmi < 18.5:
@@ -41,17 +43,17 @@ if tinggi != "" and berat != "":
 	  # Output
 		print("Obesiti")
 
-# Jika input tinggi tidak sama dengan "" dan berat sama dengan ""
+# Jika input tinggi tidak kosong dan berat kosong
 elif tinggi != "" and berat == "":
-  	# Output
- 	print("ERROR:\nMasukkan Berat Badan Anda!")
+  # Output
+  print("ERROR:\nMasukkan Berat Badan Anda Dengan Betul!")
 
-# Jika input tinggi sama dengan "" dan berat tidak sama dengan ""
+# Jika input tinggi kosong dan berat tidak kosong
 elif tinggi == "" and berat != "":
-  	# Output
-  	print("ERROR:\nMasukkan Ketinggian Anda!")
+  # Output
+  print("ERROR:\nMasukkan Ketinggian Anda Dengan Betul!")
 
 # Jika tinggi dan berat kosong
 else:
-  	# Output
-  	print("ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda!")
+  # Output
+  print("ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda Dengan Betul!")
