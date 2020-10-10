@@ -57,4 +57,3 @@ elif tinggi == "" and berat != "":
 else:
   	# Output
   	print("ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda!")
-  	
