@@ -10,7 +10,7 @@ berat = input("Masukkan berat badan anda (KG): ")
 # Note - != bermaksud tidak sama dengan
 # Jika input tinggi tidak sama dengan "" dan berat tidak sama dengan ""
 if tinggi != "" and berat != "":
-  
+
 	# Proses
 	# Tukar string kepada nombor
 	berat = float(berat)
@@ -53,7 +53,7 @@ elif tinggi == "" and berat != "":
   	# Output
   	print("ERROR:\nMasukkan Ketinggian Anda!")
 
-# Jika tinggi dan berat kosong
+# Jika input tinggi sama dengan "" dan berat sama dengan ""
 else:
   	# Output
   	print("ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda!")
