@@ -25,22 +25,22 @@ if tinggi != "" and berat != "":
 
 	# Jika bmi kurang daripada 18.5
 	if bmi < 18.5:
-	  # Output
+	  	# Output
 		print("Kurang Berat Badan")
 
 	# Jika bmi lebih atau sama dengan 18.5 dan kurang daripada 24.9
 	elif bmi >= 18.5 and bmi < 24.9:
-	  # Output
+	  	# Output
 		print("Berat Badan Normal")
 
 	# Jika bmi lebih atau sama dengan 25.0 dan kurang daripada 29.9
 	elif bmi >= 25.0 and bmi < 29.9:
-	  # Output
+	  	# Output
 		print("Lebih Berat Badan")
 
 	# Jika bmi lebih atau sama dengan 30.0
 	elif bmi >= 30.0:
-	  # Output
+	 	# Output
 		print("Obesiti")
 
 # Jika input tinggi tidak sama dengan "" dan berat sama dengan ""
