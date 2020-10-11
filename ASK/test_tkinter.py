@@ -65,8 +65,8 @@ button1.grid(row=1, column=1)
 button2.grid(row=2, column=2)
 input_user.grid(row=3, column=3)
 
-# Focus kepada widget Entry
-input_user.focus()
+# Focus kepada sesuatu widget
+input_user.focus() # focus ke widget entry
 
 # Loop the window
 window.mainloop()
