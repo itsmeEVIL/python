@@ -13,10 +13,10 @@ else:
 
 # Functions
 def button_clicked():
-	# Dapatkan input daripada entry input_ketinggian
-	tinggi = input_ketinggian.get()
-	# Dapatkan input daripada entry input_berat
-    berat = input_berat.get()
+    # Dapatkan input daripada entry input_ketinggian
+    tinggi = input_ketinggian.get()
+    # Dapatkan input daripada entry input_berat
+    berat= input_berat.get()
     
     # Note - != bermaksud tidak sama dengan
     # Jika input tinggi tidak sama dengan "" dan berat tidak sama dengan ""
@@ -24,22 +24,22 @@ def button_clicked():
     	
         # Proses
 	    # Tukar string kepada nombor
-	    berat = float(berat)
-	    tinggi = float(tinggi)
+        berat = float(berat)
+        tinggi = float(tinggi)
 	    # Formula untuk mengira BMI - berat ÷ tinggi^2
-	    bmi = berat / (tinggi * tinggi)
+        bmi = berat / (tinggi * tinggi)
 	    # Bundarkan bmi kepada 2 tempat perpuluhan
 	    bmi = round(bmi, 2)
 	    # Tukar bmi *float* menjadi string
-	    bmi = str(bmi)
+        bmi = str(bmi)
 	
 	    # Jika bmi kurang daripada 18.5
-	    if bmi < 18.5:
-	        status = "Kurang Berat Badan"
+        if bmi < 18.5:
+            status = "Kurang Berat Badan"
 
 	    # Jika bmi lebih atau sama dengan 18.5 dan kurang daripada 24.9
-	    elif bmi >= 18.5 and bmi < 24.9:
-	        status = "Berat Badan Normal"
+        elif bmi >= 18.5 and bmi < 24.9:
+            status = "Berat Badan Normal"
 
 	    # Jika bmi lebih atau sama dengan 25.0 dan kurang daripada 29.9
 	    elif bmi >= 25.0 and bmi < 29.9:
@@ -47,11 +47,11 @@ def button_clicked():
 
 	    # Jika bmi lebih atau sama dengan 30.0
 	    elif bmi >= 30.0:
-	    	status = "Obesiti"
+	        status = "Obesiti"
 	    
 	    # Output
 	    # Configure/Edit Label output_bmi
-        output_bmi.configure(text="\nBMI Anda:" + bmi + "\nDan Anda:" + status)
+	    output_bmi.configure(text="\nBMI Anda:" + bmi + "\nDan Anda:" + status)
 
     # Jika input tinggi tidak sama dengan "" dan berat sama dengan ""
     elif tinggi != "" and berat == "":
