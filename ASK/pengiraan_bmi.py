@@ -56,7 +56,7 @@ def kira_bmi():
 	  	print("ERROR:\nMasukkan Ketinggian Anda!")
 
 	# Jika input tinggi sama dengan "" dan berat sama dengan ""
-	else:
+	elif tinggi == "" and berat == "":
 	  	# Output
 	  	print("ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda!")
 
