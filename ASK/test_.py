@@ -9,82 +9,115 @@ from tkinter import ttk
 
 # FUNCTIONS
 # Function untuk mengira bmi dan mengetahui status sesuatu bmi
-def kira_bmi():
-
+def keadaan_bmi():
 	# Dapatkan input daripada entry input_ketinggian
 	tinggi = input_ketinggian.get()
 	# Dapatkan input daripada entry input_berat
 	berat = input_berat.get()
 
-	# Note - != bermaksud tidak sama dengan
-	# Jika input tinggi tidak sama dengan "" dan berat tidak sama dengan ""
-	if tinggi != "" and berat != "":
+	def kira_bmi():
+		global tinggi, berat
+		# Note - != bermaksud tidak sama dengan
+		# Jika input tinggi tidak sama dengan "" dan berat tidak sama dengan ""
+		if tinggi != "" and berat != "":
+	    	# Proses
+			# Tukar string kepada nombor
+			berat = float(berat)
+			tinggi = float(tinggi)
+			# Pengiraan BMI
+			bmi = berat / (tinggi * tinggi)
+			# Bundarkan bmi kepada 2 tempat perpuluhan
+			bmi = round(bmi, 2)
 
+			# Jika bmi kurang daripada 18.5
+			if bmi < 18.5:
+				status = "Kurang Berat Badan"
+
+			# Jika bmi lebih atau sama dengan 18.5 dan kurang daripada 24.9
+			elif bmi >= 18.5 and bmi < 24.9:
+				status = "Berat Badan Normal"
+
+			# Jika bmi lebih atau sama dengan 25.0 dan kurang daripada 29.9
+			elif bmi >= 25.0 and bmi < 29.9:
+				status = "Lebih Berat Badan"
+
+			# Jika bmi lebih atau sama dengan 30.0
+			elif bmi >= 30.0:
+				status = "Obesiti"
+
+			# Tukarkan bmi *float* menjadi string
+			bmi = str(bmi)
+
+			# Output
+			# Configure/Edit Label output_bmi
+			output_bmi.config(text="BMI Anda: " + bmi + "\nDan Anda: " + status, fg='black')
+
+		# Jika input tinggi tidak sama dengan "" dan berat sama dengan ""
+		elif tinggi != "" and berat == "":
+			# Output
+			# Configure/Edit Label output_bmi
+			output_bmi.config(text="ERROR:\nMasukkan Berat Badan Anda!", fg='red')
+
+		# Jika input tinggi sama dengan "" dan berat tidak sama dengan ""
+		elif tinggi == "" and berat != "":
+			# Output
+			# Configure/Edit Label output_bmi
+			output_bmi.config(text="ERROR:\nMasukkan Ketinggian Anda!", fg='red')
+
+		# Jika input tinggi sama dengan "" dan berat sama dengan ""
+		else:
+			# Output
+			# Configure/Edit Label output_bmi
+			output_bmi.config(text="ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda!", fg='red')
+
+	# Jika tinggi dan berat tidak sama dengan ""
+	if tinggi != "" and berat != "":
+		# Test input tinggi & berat jika boleh ditukarkan menjadi float 
+		try:
+			test_tinggi = float(tinggi)
+			test_berat = float(berat)
+
+		# Jika try == error
+		except:
+			# Output
+			# Configure/Edit Label output_bmi
+			output_bmi.config(text="ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda Dengan Betul (Nombor)!", fg='red')
+
+		# Jika try != error
+		else:
+			kira_bmi()
+
+	# Jika tinggi tidak sama dengan ""
+	elif tinggi != "":
+		# Test input tinggi jika boleh ditukarkan menjadi float 
+		try:
+			test_tinggi = float(tinggi)
+
+		# Jika try == error
+		except:
+			# Output
+			# Configure/Edit Label output_bmi
+			output_bmi.config(text="ERROR:\nMasukkan Ketinggian Anda Dengan Betul!", fg='red')
+
+		# Jika try != error
+		else:
+			kira_bmi()
+
+	# Jika berat tidak sama dengan ""
+	elif berat != "":
+		# Test input berat jika boleh ditukarkan menjadi float 
 		try:
 			test_berat = float(berat)
 
-		except ValueError:
+		# Jika try == error
+		except:
 			# Output
 			# Configure/Edit Label output_bmi
 			output_bmi.config(text="ERROR:\nMasukkan Berat Badan Anda Dengan Betul!", fg='red')
 
-		try:
-			test_ketinggian = float(tinggi)
-
-		except ValueError:
-			# Output
-			# Configure/Edit Label output_bmi
-			output_bmi.config(text="ERROR:\nMasukkan Ketinggian Anda Dengan Betul!", fg='red')
-    	
-    	# Proses
-		# Tukar string kepada nombor
-		berat = float(berat)
-		tinggi = float(tinggi)
-		# Pengiraan BMI
-		bmi = berat / (tinggi * tinggi)
-		# Bundarkan bmi kepada 2 tempat perpuluhan
-		bmi = round(bmi, 2)
-
-		# Jika bmi kurang daripada 18.5
-		if bmi < 18.5:
-			status = "Kurang Berat Badan"
-
-		# Jika bmi lebih atau sama dengan 18.5 dan kurang daripada 24.9
-		elif bmi >= 18.5 and bmi < 24.9:
-			status = "Berat Badan Normal"
-
-		# Jika bmi lebih atau sama dengan 25.0 dan kurang daripada 29.9
-		elif bmi >= 25.0 and bmi < 29.9:
-			status = "Lebih Berat Badan"
-
-		# Jika bmi lebih atau sama dengan 30.0
-		elif bmi >= 30.0:
-			status = "Obesiti"
-
-		# Tukarkan bmi *float* menjadi string
-		bmi = str(bmi)
-
-		# Output
-		# Configure/Edit Label output_bmi
-		output_bmi.config(text="BMI Anda: " + bmi + "\nDan Anda: " + status,  fg='black')
-
-	# Jika input tinggi tidak sama dengan "" dan berat sama dengan ""
-	elif tinggi != "" and berat == "":
-		# Output
-		# Configure/Edit Label output_bmi
-		output_bmi.config(text="ERROR:\nMasukkan Berat Badan Anda!", fg='red')
-
-	# Jika input tinggi sama dengan "" dan berat tidak sama dengan ""
-	elif tinggi == "" and berat != "":
-		# Output
-		# Configure/Edit Label output_bmi
-		output_bmi.config(text="ERROR:\nMasukkan Ketinggian Anda!", fg='red')
-
-	# Jika input tinggi sama dengan "" dan berat sama dengan ""
-	else:
-		# Output
-		# Configure/Edit Label output_bmi
-		output_bmi.config(text="ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda!", fg='red')
+		# Jika try != error
+		else:
+			kira_bmi()
 
 
 # Class
@@ -139,7 +172,7 @@ input_ketinggian.place(relwidth=0.4, relheight=1)
 input_berat = PlaceholderEntry(frame_input, 'Masukkan Berat Anda (KG)', font=40, justify='center')
 input_berat.place(relx=0.4, relwidth=0.4, relheight=1)
 # Button 'OK' untuk calculate input yang diberi
-button = tk.Button(frame_input, text="OK", font=10, bg='#e6e6e6', command=kira_bmi)
+button = tk.Button(frame_input, text="OK", font=10, bg='#e6e6e6', command=keadaan_bmi)
 button.place(relx=0.8, relheight=1, relwidth=0.2)
 
 # Output
