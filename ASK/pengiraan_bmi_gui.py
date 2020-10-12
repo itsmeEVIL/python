@@ -1,6 +1,7 @@
 # GUI atur cara untuk mengira BMI (Body Mass Index)
 # Kumpulan Syabil & Amir
 
+# Python 3.x Only
 # Impory module Tkinter
 import tkinter as tk
 from tkinter import ttk
@@ -23,7 +24,7 @@ def calculate_bmi():
 		test_berat = float(berat)
 
 	# Jika try == ERROR
-	except:
+	except ValueError:
 		# Output
 		# Configure/Edit Label output_bmi
 		output_bmi.config(text="ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda Dengan Betul!", fg='red')
@@ -84,22 +85,31 @@ def calculate_bmi():
 			# Configure/Edit Label output_bmi
 			output_bmi.config(text="ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda!", fg='red')
 
+
+# Class
 # Placeholder effect ## copied
 class PlaceholderEntry(ttk.Entry):
 	def __init__(self, container, placeholder, *args, **kwargs):
 		super().__init__(container, *args, **kwargs)
 		self.placeholder = placeholder
 
+		self.field_style = kwargs.pop("style", "TEntry")
+		self.placeholder_style = kwargs.pop("placeholder_style", self.field_style)
+		self["style"] = self.placeholder_style
+
 		self.insert("0", self.placeholder)
 		self.bind("<FocusIn>", self._clear_placeholder)
 		self.bind("<FocusOut>", self._add_placeholder)
 
 	def _clear_placeholder(self, e):
-		self.delete("0", "end")
+		if self["style"] == self.placeholder_style:
+			self.delete("0", "end")
+			self["style"] = self.field_style
 
 	def _add_placeholder(self, e):
 		if not self.get():
 			self.insert("0", self.placeholder)
+			self["style"] = self.placeholder_style
 
 
 # Window
