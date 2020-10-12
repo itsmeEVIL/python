@@ -1,100 +1,136 @@
 # GUI atur cara untuk mengira BMI (Body Mass Index)
 # Kumpulan Syabil & Amir
 
-# Import module sys untuk periksa versi Python
-import sys
-# Import module Tkinter
-if sys.version_info[0] == 3: # Periksa jika versi Python sama dengan 3
-    # Untuk Python3
-    import tkinter as tk ## 't'kinter
-else:
-    # Untuk Python2
-    import Tkinter as tk ## 'T'kinter
+# Impory module Tkinter
+import tkinter as tk
+from tkinter import ttk
 
-# Functions
+
+# FUNCTIONS
+# Function untuk mengira bmi dan mengetahui status sesuatu bmi
 def calculate_bmi():
+
 	# Dapatkan input daripada entry input_ketinggian
 	tinggi = input_ketinggian.get()
 	# Dapatkan input daripada entry input_berat
 	berat= input_berat.get()
     
-	# Note - != bermaksud tidak sama dengan
-	# Jika input tinggi tidak sama dengan "" dan berat tidak sama dengan ""
-	if tinggi != "" and berat != "":
-    	
-    	# Proses
-		# Tukar string kepada nombor
-		berat = float(berat)
-		tinggi = float(tinggi)
-		# Pengiraan BMI
-		bmi = berat / (tinggi * tinggi)
-		# Bundarkan bmi kepada 2 tempat perpuluhan
-		bmi = round(bmi, 2)
+    # Test input tinggi & berat jika boleh ditukarkan menjadi float 
+	try:
+		test_tinggi = float(tinggi)
+		test_berat = float(berat)
 
-		# Jika bmi kurang daripada 18.5
-		if bmi < 18.5:
-			status = "Kurang Berat Badan"
-
-		# Jika bmi lebih atau sama dengan 18.5 dan kurang daripada 24.9
-		elif bmi >= 18.5 and bmi < 24.9:
-			status = "Berat Badan Normal"
-
-		# Jika bmi lebih atau sama dengan 25.0 dan kurang daripada 29.9
-		elif bmi >= 25.0 and bmi < 29.9:
-			status = "Lebih Berat Badan"
-
-		# Jika bmi lebih atau sama dengan 30.0
-		elif bmi >= 30.0:
-			status = "Obesiti"
-
+	# Jika try == ERROR
+	except:
 		# Output
 		# Configure/Edit Label output_bmi
-		output_bmi.configure(text="\nBMI Anda: " + str(bmi) + "\nDan Anda: " + status)
+		output_bmi.config(text="ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda Dengan Betul!")
 
-	# Jika input tinggi tidak sama dengan "" dan berat sama dengan ""
-	elif tinggi != "" and berat == "":
-		# Output
-		output_bmi.configure(text="ERROR:\nMasukkan Berat Badan Anda!")
-
-	# Jika input tinggi sama dengan "" dan berat tidak sama dengan ""
-	elif tinggi == "" and berat != "":
-		# Output
-		output_bmi.configure(text="ERROR:\nMasukkan Ketinggian Anda!")
-
-	# Jika input tinggi sama dengan "" dan berat sama dengan ""
 	else:
-		# Output
-		output_bmi.configure(text="ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda!")
+		# Note - != bermaksud tidak sama dengan
+		# Jika input tinggi tidak sama dengan "" dan berat tidak sama dengan ""
+		if tinggi != "" and berat != "":
+	    	
+	    	# Proses
+			# Tukar string kepada nombor
+			berat = float(berat)
+			tinggi = float(tinggi)
+			# Pengiraan BMI
+			bmi = berat / (tinggi * tinggi)
+			# Bundarkan bmi kepada 2 tempat perpuluhan
+			bmi = round(bmi, 2)
+
+			# Jika bmi kurang daripada 18.5
+			if bmi < 18.5:
+				status = "Kurang Berat Badan"
+
+			# Jika bmi lebih atau sama dengan 18.5 dan kurang daripada 24.9
+			elif bmi >= 18.5 and bmi < 24.9:
+				status = "Berat Badan Normal"
+
+			# Jika bmi lebih atau sama dengan 25.0 dan kurang daripada 29.9
+			elif bmi >= 25.0 and bmi < 29.9:
+				status = "Lebih Berat Badan"
+
+			# Jika bmi lebih atau sama dengan 30.0
+			elif bmi >= 30.0:
+				status = "Obesiti"
+
+			# Output
+			# Configure/Edit Label output_bmi
+			output_bmi.config(text="BMI Anda: " + str(bmi) + "\nDan Anda: " + status)
+
+		# Jika input tinggi tidak sama dengan "" dan berat sama dengan ""
+		elif tinggi != "" and berat == "":
+			# Output
+			# Configure/Edit Label output_bmi
+			output_bmi.config(text="ERROR:\nMasukkan Berat Badan Anda!")
+
+		# Jika input tinggi sama dengan "" dan berat tidak sama dengan ""
+		elif tinggi == "" and berat != "":
+			# Output
+			# Configure/Edit Label output_bmi
+			output_bmi.config(text="ERROR:\nMasukkan Ketinggian Anda!")
+
+		# Jika input tinggi sama dengan "" dan berat sama dengan ""
+		else:
+			# Output
+			# Configure/Edit Label output_bmi
+			output_bmi.config(text="ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda!")
+
+# Placeholder effect ## copied
+class PlaceholderEntry(ttk.Entry):
+	def __init__(self, container, placeholder, *args, **kwargs):
+		super().__init__(container, *args, **kwargs)
+		self.placeholder = placeholder
+
+		self.insert("0", self.placeholder)
+		self.bind("<FocusIn>", self._clear_placeholder)
+		self.bind("<FocusOut>", self._add_placeholder)
+
+	def _clear_placeholder(self, e):
+		self.delete("0", "end")
+
+	def _add_placeholder(self, e):
+		if not self.get():
+			self.insert("0", self.placeholder)
 
 
 # Window
-window = tk.Tk()
-window.title('Atur Cara Untuk Mengira BMI Anda')
-window.configure(bg='#0099ff')
-window.geometry('600x500')
+window = tk.Tk() # create empty window
+window.title('Atur Cara Untuk Mengira BMI Anda') # create the window title
+window.configure(bg='#0040ff') # configure window background color
+w, h = window.winfo_screenwidth(), window.winfo_screenheight() # get screen width & height info
+window.geometry("%dx%d+0+0" % (w, h)) # set window width & height the same as screen's
 
+# Tajuk
 # Frame
-frame_input = tk.Frame(window, bg='#99d6ff', bd=5)
-frame_input.place(relx=0.5, rely=0.1, relwidth=0.75, relheight=0.1, anchor='n')
-
-# Entry/Input ketinggian
-input_ketinggian = tk.Entry(frame_input, font=40)
-input_ketinggian.place(relwidth=0.65, relheight=1)
-
-# Entry/Input berat
-input_berat = tk.Entry(frame_input, font=40)
-input_berat.place(relx=0.15, relwidth=0.65, relheight=1)
-
-# Button 'OK' untuk calculate input yang diberi
-button = tk.Button(frame_input, text="OK", font=10, command=calculate_bmi)
-button.place(relx=0.7, relheight=1, relwidth=0.3)
-
-# Frame
-frame_output = tk.Frame(window,bg='#99d6ff',bd=5)
-frame_output.place(relx=0.5, rely=0.25, relwidth=0.75, relheight=0.6, anchor='n')
-
+frame_tajuk = tk.Frame(window, bg='#99b3ff', bd=5)
+frame_tajuk.place(relx=0.5, rely=0.1, relwidth=0.75, relheight=0.1, anchor='n')
 # Label
-output_bmi = tk.Label(frame_output, font=40)
+label_tajuk = tk.Label(frame_tajuk, text='KALKULATOR BMI', font=('Arial Bold', 30), bg='white', justify='center')
+label_tajuk.place(relwidth=1, relheight=1)
+
+# Input/Entry User
+# Frame
+frame_input = tk.Frame(window, bg='#99b3ff', bd=5)
+frame_input.place(relx=0.5, rely=0.35, relwidth=0.75, relheight=0.1, anchor='n')
+# Ketinggian
+input_ketinggian = PlaceholderEntry(frame_input, 'Masukkan Ketinggian Anda (Meter)', font=40, justify='center')
+input_ketinggian.place(relwidth=0.4, relheight=1)
+# Berat
+input_berat = PlaceholderEntry(frame_input, 'Masukkan Berat Anda (KG)', font=40, justify='center')
+input_berat.place(relx=0.4, relwidth=0.4, relheight=1)
+# Button 'OK' untuk calculate input yang diberi
+button = tk.Button(frame_input, text="OK", font=10, bg='#e6e6e6', command=calculate_bmi)
+button.place(relx=0.8, relheight=1, relwidth=0.2)
+
+# Output
+# Frame
+frame_output = tk.Frame(window,bg='#99b3ff',bd=5)
+frame_output.place(relx=0.5, rely=0.50, relwidth=0.75, relheight=0.4, anchor='n')
+# Label
+output_bmi = tk.Label(frame_output, text='OUTPUT', font=('Bold', 18), bg='white', justify='center')
 output_bmi.place(relwidth=1, relheight=1)
 
 # Jalankan program
