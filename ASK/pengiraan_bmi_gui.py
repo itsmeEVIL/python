@@ -13,19 +13,22 @@ def calculate_bmi():
 	# Dapatkan input daripada entry input_ketinggian
 	tinggi = input_ketinggian.get()
 	# Dapatkan input daripada entry input_berat
-	berat= input_berat.get()
-    
+	berat = input_berat.get()
+
     # Test input tinggi & berat jika boleh ditukarkan menjadi float 
 	try:
+		# Tukar tinggi *string* menjadi float
 		test_tinggi = float(tinggi)
+		# Tukar berat *string* menjadi float
 		test_berat = float(berat)
 
 	# Jika try == ERROR
 	except:
 		# Output
 		# Configure/Edit Label output_bmi
-		output_bmi.config(text="ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda Dengan Betul!")
+		output_bmi.config(text="ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda Dengan Betul!", fg='red')
 
+	# Jika try != ERROR
 	else:
 		# Note - != bermaksud tidak sama dengan
 		# Jika input tinggi tidak sama dengan "" dan berat tidak sama dengan ""
@@ -56,27 +59,30 @@ def calculate_bmi():
 			elif bmi >= 30.0:
 				status = "Obesiti"
 
+			# Tukarkan bmi *float* menjadi string
+			bmi = str(bmi)
+
 			# Output
 			# Configure/Edit Label output_bmi
-			output_bmi.config(text="BMI Anda: " + str(bmi) + "\nDan Anda: " + status)
+			output_bmi.config(text="BMI Anda: " + bmi + "\nDan Anda: " + status,  fg='black')
 
 		# Jika input tinggi tidak sama dengan "" dan berat sama dengan ""
 		elif tinggi != "" and berat == "":
 			# Output
 			# Configure/Edit Label output_bmi
-			output_bmi.config(text="ERROR:\nMasukkan Berat Badan Anda!")
+			output_bmi.config(text="ERROR:\nMasukkan Berat Badan Anda!", fg='red')
 
 		# Jika input tinggi sama dengan "" dan berat tidak sama dengan ""
 		elif tinggi == "" and berat != "":
 			# Output
 			# Configure/Edit Label output_bmi
-			output_bmi.config(text="ERROR:\nMasukkan Ketinggian Anda!")
+			output_bmi.config(text="ERROR:\nMasukkan Ketinggian Anda!", fg='red')
 
 		# Jika input tinggi sama dengan "" dan berat sama dengan ""
 		else:
 			# Output
 			# Configure/Edit Label output_bmi
-			output_bmi.config(text="ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda!")
+			output_bmi.config(text="ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda!", fg='red')
 
 # Placeholder effect ## copied
 class PlaceholderEntry(ttk.Entry):
@@ -127,10 +133,10 @@ button.place(relx=0.8, relheight=1, relwidth=0.2)
 
 # Output
 # Frame
-frame_output = tk.Frame(window,bg='#99b3ff',bd=5)
+frame_output = tk.Frame(window, bg='#99b3ff', bd=5)
 frame_output.place(relx=0.5, rely=0.50, relwidth=0.75, relheight=0.4, anchor='n')
 # Label
-output_bmi = tk.Label(frame_output, text='OUTPUT', font=('Bold', 18), bg='white', justify='center')
+output_bmi = tk.Label(frame_output, text='OUTPUT', font=('Bold', 18), bg='white', fg='black', justify='center')
 output_bmi.place(relwidth=1, relheight=1)
 
 # Jalankan program
