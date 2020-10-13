@@ -8,9 +8,19 @@ from tkinter import ttk
 
 
 # FUNCTIONS
-# Function untuk mengira bmi dan mengetahui status sesuatu bmi
-def kira_bmi():
+# Function - mengetahui jika value ialah float atau tidak
+def isfloat(value):
+	# Jika value == float return true
+	try:
+		float(value)
+		return True
 
+	# Jika value != float return false
+	except ValueError:
+		return False
+
+# Function - mengira bmi dan mengetahui status sesuatu bmi
+def kira_bmi():
 	# Dapatkan input daripada entry input_ketinggian
 	tinggi = input_ketinggian.get()
 	# Dapatkan input daripada entry input_berat
@@ -19,54 +29,56 @@ def kira_bmi():
 	# Note - != bermaksud tidak sama dengan
 	# Jika input tinggi tidak sama dengan "" dan berat tidak sama dengan ""
 	if tinggi != "" and berat != "":
+		# Jika tinggi == float dan berat == float
+		if isfloat(tinggi) == True and isfloat(berat) == True:
+			# Tukar string kepada nombor
+			berat = float(berat)
+			tinggi = float(tinggi)
+			# Pengiraan BMI
+			bmi = berat / (tinggi * tinggi)
+			# Bundarkan bmi kepada 2 tempat perpuluhan
+			bmi = round(bmi, 2)
 
-		try:
-			test_berat = float(berat)
+			# Jika bmi kurang daripada 18.5
+			if bmi < 18.5:
+				status = "Kurang Berat Badan"
 
-		except ValueError:
+			# Jika bmi lebih atau sama dengan 18.5 dan kurang daripada 24.9
+			elif bmi >= 18.5 and bmi < 24.9:
+				status = "Berat Badan Normal"
+
+			# Jika bmi lebih atau sama dengan 25.0 dan kurang daripada 29.9
+			elif bmi >= 25.0 and bmi < 29.9:
+				status = "Lebih Berat Badan"
+
+			# Jika bmi lebih atau sama dengan 30.0
+			elif bmi >= 30.0:
+				status = "Obesiti"
+
+			# Tukarkan bmi *float* menjadi string
+			bmi = str(bmi)
+
 			# Output
 			# Configure/Edit Label output_bmi
-			output_bmi.config(text="ERROR:\nMasukkan Berat Badan Anda Dengan Betul!", fg='red')
+			output_bmi.config(text="BMI Anda: " + bmi + "\nDan Anda: " + status,  fg='black')
 
-		try:
-			test_ketinggian = float(tinggi)
-
-		except ValueError:
+		# Jika tinggi != float dan berat == float 
+		elif isfloat(tinggi) == False and isfloat(berat) == True:
 			# Output
 			# Configure/Edit Label output_bmi
-			output_bmi.config(text="ERROR:\nMasukkan Ketinggian Anda Dengan Betul!", fg='red')
-    	
-    	# Proses
-		# Tukar string kepada nombor
-		berat = float(berat)
-		tinggi = float(tinggi)
-		# Pengiraan BMI
-		bmi = berat / (tinggi * tinggi)
-		# Bundarkan bmi kepada 2 tempat perpuluhan
-		bmi = round(bmi, 2)
+			output_bmi.config(text="ERROR:\nMasukkan Ketinggian Anda Dengan Betul (Nombor)!", fg='red')
 
-		# Jika bmi kurang daripada 18.5
-		if bmi < 18.5:
-			status = "Kurang Berat Badan"
+		# Jika tinggi == float dan berat != float
+		elif isfloat(tinggi) == True and isfloat(berat) == False:
+			# Output
+			# Configure/Edit Label output_bmi
+			output_bmi.config(text="ERROR:\nMasukkan Berat Badan Anda Dengan Betul (Nombor)!", fg='red')
 
-		# Jika bmi lebih atau sama dengan 18.5 dan kurang daripada 24.9
-		elif bmi >= 18.5 and bmi < 24.9:
-			status = "Berat Badan Normal"
-
-		# Jika bmi lebih atau sama dengan 25.0 dan kurang daripada 29.9
-		elif bmi >= 25.0 and bmi < 29.9:
-			status = "Lebih Berat Badan"
-
-		# Jika bmi lebih atau sama dengan 30.0
-		elif bmi >= 30.0:
-			status = "Obesiti"
-
-		# Tukarkan bmi *float* menjadi string
-		bmi = str(bmi)
-
-		# Output
-		# Configure/Edit Label output_bmi
-		output_bmi.config(text="BMI Anda: " + bmi + "\nDan Anda: " + status,  fg='black')
+		# Jika tinggi != float dan berat != float
+		else:
+			# Output
+			# Configure/Edit Label output_bmi
+			output_bmi.config(text="ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda Dengan Betul (Nombor)!", fg='red') 
 
 	# Jika input tinggi tidak sama dengan "" dan berat sama dengan ""
 	elif tinggi != "" and berat == "":
@@ -116,7 +128,7 @@ class PlaceholderEntry(ttk.Entry):
 # Window
 window = tk.Tk() # create empty window
 window.title('Atur Cara Untuk Mengira BMI Anda') # create the window title
-window.configure(bg='#0040ff') # configure window background color
+window.configure(bg='#1a75ff') # configure window background color
 w, h = window.winfo_screenwidth(), window.winfo_screenheight() # get screen width & height info
 window.geometry("%dx%d+0+0" % (w, h)) # set window width & height the same as screen's
 
@@ -131,7 +143,7 @@ label_tajuk.place(relwidth=1, relheight=1)
 # Oleh
 # Frame
 frame_oleh = tk.Frame(window, bg='#99b3ff', bd=5)
-frame_oleh.place(relx=0.5, rely=0.23, relwidth=0.15, relheight=0.05, anchor='n')
+frame_oleh.place(relx=0.5, rely=0.23, relwidth=0.20, relheight=0.08, anchor='n')
 # Label
 label_oleh = tk.Label(frame_oleh, text='Oleh: Syabil & Amir', font=('Arial Bold', 15), bg='white', justify='center')
 label_oleh.place(relwidth=1, relheight=1)
@@ -139,7 +151,7 @@ label_oleh.place(relwidth=1, relheight=1)
 # Input/Entry User
 # Frame
 frame_input = tk.Frame(window, bg='#99b3ff', bd=5)
-frame_input.place(relx=0.5, rely=0.35, relwidth=0.75, relheight=0.1, anchor='n')
+frame_input.place(relx=0.5, rely=0.37, relwidth=0.75, relheight=0.1, anchor='n')
 # Ketinggian
 input_ketinggian = PlaceholderEntry(frame_input, 'Masukkan Ketinggian Anda (Meter)', font=40, justify='center')
 input_ketinggian.place(relwidth=0.4, relheight=1)

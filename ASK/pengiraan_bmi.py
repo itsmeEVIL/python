@@ -7,12 +7,22 @@ print("***Atur Cara Untuk Mengira BMI Anda***\n")
 tinggi = input("Masukkan ketinggian anda (Meter): ")
 berat = input("Masukkan berat badan anda (KG): ")
 
-def kira_bmi():
-	global tinggi, berat
-	# Note - != bermaksud tidak sama dengan
-	# Jika input tinggi tidak sama dengan "" dan berat tidak sama dengan ""
-	if tinggi != "" and berat != "":
+# Function - mengetahui jika value ialah float atau tidak
+def isfloat(value):
+	# Jika value == float return true
+	try:
+		float(value)
+		return True
 
+	# Jika value != float return false
+	except ValueError:
+		return False
+
+# Note - != bermaksud tidak sama dengan
+# Jika input tinggi tidak sama dengan "" dan berat tidak sama dengan ""
+if tinggi != "" and berat != "":
+	# Jika tinggi == float dan berat == float
+	if isfloat(tinggi) == True and isfloat(berat) == True:
 		# Proses
 		# Tukar string kepada nombor
 		berat = float(berat)
@@ -45,60 +55,33 @@ def kira_bmi():
 		 	# Output
 			print("Obesiti")
 
-	# Jika input tinggi tidak sama dengan "" dan berat sama dengan ""
-	elif tinggi != "" and berat == "":
-	  	# Output
-	 	print("ERROR:\nMasukkan Berat Badan Anda!")
-
-	# Jika input tinggi sama dengan "" dan berat tidak sama dengan ""
-	elif tinggi == "" and berat != "":
-	  	# Output
-	  	print("ERROR:\nMasukkan Ketinggian Anda!")
-
-	# Jika input tinggi sama dengan "" dan berat sama dengan ""
-	elif tinggi == "" and berat == "":
-	  	# Output
-	  	print("ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda!")
-
-# Jika tinggi dan berat tidak sama dengan ""
-if tinggi != "" and berat != "":
-	# Test input tinggi & berat jika boleh ditukarkan menjadi float 
-	try:
-		test_tinggi = float(tinggi)
-		test_berat = float(berat)
-
-	# Jika try == error
-	except:
-		print("ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda Dengan Betul (Nombor)!")
-
-	# Jika try != error
-	else:
-		kira_bmi()
-
-# Jika tinggi tidak sama dengan ""
-elif tinggi != "":
-	# Test input tinggi jika boleh ditukarkan menjadi float 
-	try:
-		test_tinggi = float(tinggi)
-
-	# Jika try == error
-	except:
+	# Jika tinggi != float dan berat == float 
+	elif isfloat(tinggi) == False and isfloat(berat) == True:
+		# Output
 		print("ERROR:\nMasukkan Ketinggian Anda Dengan Betul (Nombor)!")
 
-	# Jika try != error
-	else:
-		kira_bmi()
-
-# Jika berat tidak sama dengan ""
-elif berat != "":
-	# Test input berat jika boleh ditukarkan menjadi float 
-	try:
-		test_berat = float(berat)
-
-	# Jika try == error
-	except:
+	# Jika tinggi == float dan berat != float
+	elif isfloat(tinggi) == True and isfloat(berat) == False:
+		# Output
 		print("ERROR:\nMasukkan Berat Badan Anda Dengan Betul (Nombor)!")
 
-	# Jika try != error
+	# Jika tinggi != float dan berat != float
 	else:
-		kira_bmi()
+		# Output
+		print("ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda Dengan Betul (Nombor)!") 
+
+
+# Jika input tinggi tidak sama dengan "" dan berat sama dengan ""
+elif tinggi != "" and berat == "":
+  	# Output
+ 	print("ERROR:\nMasukkan Berat Badan Anda!")
+
+# Jika input tinggi sama dengan "" dan berat tidak sama dengan ""
+elif tinggi == "" and berat != "":
+  	# Output
+  	print("ERROR:\nMasukkan Ketinggian Anda!")
+
+# Jika input tinggi sama dengan "" dan berat sama dengan ""
+else:
+  	# Output
+  	print("ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda!")
