@@ -10,12 +10,12 @@ from tkinter import ttk
 # FUNCTIONS
 # Function - mengetahui jika value ialah float atau tidak
 def isfloat(value):
-	# Jika value sama dengan float return true
+	# Jika value == float return true
 	try:
 		float(value)
 		return True
 
-	# Jika value tidak sama dengan float return false
+	# Jika value != float return false
 	except ValueError:
 		return False
 
@@ -29,7 +29,7 @@ def kira_bmi():
 	# Note - != bermaksud tidak sama dengan
 	# Jika input tinggi tidak sama dengan "" dan berat tidak sama dengan ""
 	if tinggi != "" and berat != "":
-		# Jika tinggi sama dengan float dan berat sama dengan float
+		# Jika tinggi == float dan berat == float
 		if isfloat(tinggi) == True and isfloat(berat) == True:
 			# Tukar string kepada nombor
 			berat = float(berat)
@@ -62,19 +62,19 @@ def kira_bmi():
 			# Configure/Edit Label output_bmi
 			output_bmi.config(text="BMI Anda: " + bmi + "\nDan Anda: " + status,  fg='black')
 
-		# Jika tinggi tidak sama dengan float dan berat sama dengan float 
+		# Jika tinggi != float dan berat == float 
 		elif isfloat(tinggi) == False and isfloat(berat) == True:
 			# Output
 			# Configure/Edit Label output_bmi
 			output_bmi.config(text="ERROR:\nMasukkan Ketinggian Anda Dengan Betul (Nombor)!", fg='red')
 
-		# Jika tinggi sama dengan float dan berat tidak sama dengan float
+		# Jika tinggi == float dan berat != float
 		elif isfloat(tinggi) == True and isfloat(berat) == False:
 			# Output
 			# Configure/Edit Label output_bmi
 			output_bmi.config(text="ERROR:\nMasukkan Berat Badan Anda Dengan Betul (Nombor)!", fg='red')
 
-		# Jika tinggi tidak sama dengan float dan berat tidak sama dengan float
+		# Jika tinggi != float dan berat != float
 		else:
 			# Output
 			# Configure/Edit Label output_bmi
