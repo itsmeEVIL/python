@@ -9,19 +9,19 @@ berat = input("Masukkan berat badan anda (KG): ")
 
 # Function - mengetahui jika value ialah float atau tidak
 def isfloat(value):
-	# Jika value == float return true
+	# Jika value sama dengan float return true
 	try:
 		float(value)
 		return True
 
-	# Jika value != float return false
+	# Jika value tidak sama dengan float return false
 	except ValueError:
 		return False
 
 # Note - != bermaksud tidak sama dengan
 # Jika input tinggi tidak sama dengan "" dan berat tidak sama dengan ""
 if tinggi != "" and berat != "":
-	# Jika tinggi == float dan berat == float
+	# Jika tinggi sama dengan float dan berat sama dengan float
 	if isfloat(tinggi) == True and isfloat(berat) == True:
 		# Proses
 		# Tukar string kepada nombor
@@ -55,17 +55,17 @@ if tinggi != "" and berat != "":
 		 	# Output
 			print("Obesiti")
 
-	# Jika tinggi != float dan berat == float 
+	# Jika tinggi tidak sama dengan float dan berat sama dengan float 
 	elif isfloat(tinggi) == False and isfloat(berat) == True:
 		# Output
 		print("ERROR:\nMasukkan Ketinggian Anda Dengan Betul (Nombor)!")
 
-	# Jika tinggi == float dan berat != float
+	# Jika tinggi sama dengan float dan berat tidak sama dengan float
 	elif isfloat(tinggi) == True and isfloat(berat) == False:
 		# Output
 		print("ERROR:\nMasukkan Berat Badan Anda Dengan Betul (Nombor)!")
 
-	# Jika tinggi != float dan berat != float
+	# Jika tinggi tidak sama dengan float dan berat tidak sama dengan float
 	else:
 		# Output
 		print("ERROR:\nMasukkan Ketinggian Dan Berat Badan Anda Dengan Betul (Nombor)!") 
