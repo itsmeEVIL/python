@@ -2,7 +2,7 @@
 # Kumpulan Syabil & Amir
 
 # Python 3.x Only
-# Impory module Tkinter
+# Import module Tkinter
 import tkinter as tk
 from tkinter import ttk
 
