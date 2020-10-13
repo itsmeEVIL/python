@@ -128,6 +128,14 @@ frame_tajuk.place(relx=0.5, rely=0.1, relwidth=0.75, relheight=0.1, anchor='n')
 label_tajuk = tk.Label(frame_tajuk, text='KALKULATOR BMI', font=('Arial Bold', 30), bg='white', justify='center')
 label_tajuk.place(relwidth=1, relheight=1)
 
+# Oleh
+# Frame
+frame_oleh = tk.Frame(window, bg='#99b3ff', bd=5)
+frame_oleh.place(relx=0.5, rely=0.23, relwidth=0.15, relheight=0.05, anchor='n')
+# Label
+label_oleh = tk.Label(frame_oleh, text='Oleh: Syabil & Amir', font=('Arial Bold', 15), bg='white', justify='center')
+label_oleh.place(relwidth=1, relheight=1)
+
 # Input/Entry User
 # Frame
 frame_input = tk.Frame(window, bg='#99b3ff', bd=5)
