@@ -1,34 +1,34 @@
-# Atur cara untuk mengira purata ketinggian 5 ahli
+# program to calculate the average height of 5 members
 
-# Input
-# Ketinggian ahli pertama
-pertama = float(input('Ketinggian ahli pertama: '))
-# Ketinggian ahli kedua
-kedua = float(input('Ketinggian ahli kedua: '))
-# Ketinggian ahli ketiga
-ketiga = float(input('Ketinggian ahli ketiga: '))
-# Ketinggian ahli keempat
-keempat = float(input('Ketinggian ahli keempat: '))
-# Ketinggian ahli kelima
-kelima= float(input('Ketinggian ahli kelima: '))
+# input
+# height of first member
+first = float(input('Height of the first member (Meter): '))
+# height of second member
+second = float(input('Height of the second member (Meter): '))
+# height of third member
+third = float(input('Height of the third member (Meter): '))
+# height of fourth member
+fourth = float(input('Height of the fourth member (Meter): '))
+# height of fifth member
+fifth = float(input('Height of the fifth member (Meter): '))
 
-# Proses
-# Jumlah ketinggian semua ahli
-jumlah = pertama + kedua + ketiga + keempat + kelima
-# Purata ketinggian semua ahli
-purata = jumlah / 5
+# proses
+# total height of all member
+total = first + second + third + fourth + fifth
+# average height of all member
+average = total / 5
 
-# Output
-print('\nUkuran Ketinggian Yang Dimasukkan:')
-# Ketinggian ahli pertama
-print('Ahli pertama: ', pertama, 'm')
-# Ketinggian ahli kedua
-print('Ahli kedua: ', kedua, 'm')
-# Ketinggian ahli ketiga
-print('Ahli ketiga: ', ketiga, 'm')
-# Ketinggian ahli keempat
-print('Ahli keempat: ', keempat, 'm')
-# Ketinggian ahli kelima
-print('Ahli kelima: ', kelima, 'm')
-# Purata ketinggian semua ahli
-print('\nPurata Ketinggian: ', round(purata, 2), 'm')
+# output
+print('\nHeight Measurement Entered:')
+# height of first member
+print('First member: ', first, 'm')
+# height of second member
+print('Second member ', second, 'm')
+# height of third member
+print('Third member: ', third, 'm')
+# height of fourth member
+print('Fourth member: ', fourth, 'm')
+# height of fifth member
+print('Fifth member: ', fifth, 'm')
+# average of all member
+print('\nAverage Height: ', round(average, 2), 'm')
