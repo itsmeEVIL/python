@@ -1,7 +1,7 @@
 # program to calculate 2 numbers
 
 # print the available options
-print("***A Simple Calculator***\n\nCalculator to calculate 2 numbers\nOptions:\n1. Addition (+)\n2. Subtraction (-)\n3. Multiplication (x)\n4. Division (÷)\nNote - You can only choose 1 of the 4 options\n")
+print("***A Simple Calculator***\n\nCalculator to calculate 2 numbers\nOptions:\n1. Addition (+)\n2. Subtraction (-)\n3. Multiplication (x)\n4. Division (÷)\nNote - You can only choose 1 out of the 4 options\n")
 
 # input 1st num
 num1 = input("Enter the first number: ")
