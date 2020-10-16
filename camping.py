@@ -1,27 +1,27 @@
-# Atur cara untuk mengira jumlah kos perkhemahan unit beruniform 
+# program to calculate the total cost of camping in uniformed units  
 
-# Pemboleh ubah
-# Kos item-item dalam kos tetap
-# Kos kelengkapan peribadi
-peribadi = float(13.50)
-# Kos pakaian
-pakaian = float(105.90)
-# Kos sewaan khemah
-khemah = float(12.00)
+# variables
+# cost of items in fixed cost
+# cost of personal equipment
+personal = float(13.50)
+# cost of clothing
+clothing = float(105.90)
+# tent rental costs
+tent = float(12.00)
 
-# Proses
-# Kos tetap
+# process
+# fixed cost
 kos_tetap = peribadi + pakaian + khemah
-# Kos masak
+# cooking costs
 kos_masak = float(input('\nMasukkan kos untuk barangan memasak: RM'))
-# Jumlah kos
+# total cost
 jumlah_kos = kos_tetap + kos_masak
 
-# Output
+# output
 print('\n***Pengiraan Kos Perkhemahan Unit Beruniform***')
-# Jumlah kos tetap
+# total fixed cost
 print('\nJumlah bagi Kos Tetap: RM', kos_tetap)
-# Jumlah kos berubah
+# total costs change
 print('Jumlah bagi Kos Berubah : RM', kos_masak)
-# Jumlah semua kos
+# total of all costs
 print('Jumlah Kos: RM', round(jumlah_kos, 2))
