@@ -11,17 +11,17 @@ tent = float(12.00)
 
 # process
 # fixed cost
-kos_tetap = peribadi + pakaian + khemah
+fixed_cost = personal + clothing + tent
 # cooking costs
-kos_masak = float(input('\nMasukkan kos untuk barangan memasak: RM'))
+cooking_cost = float(input('\nEnter the cost for cooking: RM'))
 # total cost
-jumlah_kos = kos_tetap + kos_masak
+total_cost = fixed_cost + cooking_cost
 
 # output
-print('\n***Pengiraan Kos Perkhemahan Unit Beruniform***')
+print('\n***Calculation of Uniformed Unit Camping Cost***')
 # total fixed cost
-print('\nJumlah bagi Kos Tetap: RM', kos_tetap)
+print('\nTotal of Fixed Cost: RM', fixed_cost)
 # total costs change
-print('Jumlah bagi Kos Berubah : RM', kos_masak)
+print('Total of Changed Cost: RM', cooking_cost)
 # total of all costs
-print('Jumlah Kos: RM', round(jumlah_kos, 2))
+print('Total of All Costs: RM', round(total_cost, 2))
