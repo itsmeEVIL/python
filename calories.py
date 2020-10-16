@@ -1,86 +1,86 @@
-# Atur cara untuk mengetahui jumlah kalori yang dibenarkan berdasarkan jantina dan umur
+# program to find out the number of calories allowed based on gender and age
 
-# Output
-print('***CADANGKAN JUMLAH KALORI YANG DIBERNARKAN BERDASARKAN JANTINA DAN UMUR***')
+# output
+print('***RECOMMEND THE NUMBER OF CALORIES ALLOWED BASED ON GENDER AND AGE***')
 
-# Input
-# Jantina (Ya = Lelaki, Tidak = Perempuan)
-jantina = input('Adakah jantina anda lelaki? (YA atau TIDAK): ')
+# input
+# gender (yes = male, no = female)
+gender = input('Enter Your Gender (MALE/FEMALE: ')
 
-# Proses
-# Jika input ialah Ya
-if jantina == 'Ya' or jantina == 'ya' or jantina == 'YA':
-	# Input
-	# Umur
-	umur = int(input('Berapakah Umur Anda?'))
+# proses
+# if gender is male
+if gender.lower() == 'male':
+	# input
+	# age
+	age = int(input('What Is Your Age?'))
 
-	# Jika umur lebih atau sama dengan 60
-	if (umur >= 60):
-		# Output
-		print('Nilai kalori yang dibenarkan ialah 2010')
+	# if age more or equal to 60
+	if (age >= 60):
+		# output
+		print('The allowable caloric value is 2010')
 
-	# Jika umur lebih atau sama dengan 30
-	elif (umur >= 30):
-		# Output
-		print('Nilai kalori yang dibenarkan ialah 2460')
+	# if age more or equal to 30
+	elif (age >= 30):
+		# output
+		print('The allowable caloric value is 2460')
 
-	# Jika umur lebih atau sama dengan 19
-	elif (umur >= 19):
-		# Output
-		print('Nilai kalori yang dibenarkan ialah 2440')
+	# if age more or equal to 19
+	elif (age >= 19):
+		# output
+		print('The allowable caloric value is 2440')
 
-	# Jika umur lebih atau sama dengan 16
-	elif (umur >= 16):
-		# Output
-		print('Nilai kalori yang dibenarkan ialah 2840')
+	# if age more or equal to 16
+	elif (age >= 16):
+		# output
+		print('The allowable caloric value is 2840')
 
-	# Jika umur lebih atau sama dengan 13
-	elif (umur >= 13):
-		# Output
-		print('Nilai kalori yang dibenarkan ialah 2690')
+	# if age more or equal to 13
+	elif (age >= 13):
+		# output
+		print('The allowable caloric value is 2690')
 
-	# Jika umur kurang daripada 13
+	# if age is less than 13
 	else:
-	  # Output
-		print('Maaf, had umur perlu 13 tahun ke atas.')
+        # output
+		print('Sorry, age limit must be 13 years and above.')
 
-# Jika input ialah Tidak
-elif jantina == 'Tidak' or jantina == 'tidak' or jantina == 'TIDAK':
-	# Input
-	# Umur
-	umur = int(input('Berapakah Umur Anda?'))
+# if gender is female
+elif gender.lower() == 'female':
+	# input
+	# umur
+	age = int(input('What Is Your Age?'))
 
-	# Jika umur lebih atau sama dengan 60
-	if (umur >= 60):
-		# Output
-		print('Nilai kalori yang dibenarkan ialah 1780')
+	# if age more or equal to 60
+	if (age >= 60):
+		# output
+		print('The allowable caloric value is 1780')
 
-	# Jika umur lebih atau sama dengan 30
-	elif (umur >= 30):
-		# Output
-		print('Nilai kalori yang dibenarkan ialah 2180')
+	# if age more or equal to 30
+	elif (age >= 30):
+		# output
+		print('The allowable caloric value is 2180')
 
-	# Jika umur lebih atau sama dengan 19
-	elif (umur >= 19):
-		# Output
-		print('Nilai kalori yang dibenarkan ialah 2000')
+	# if age more or equal to 19
+	elif (age >= 19):
+		# output
+		print('The allowable caloric value is 2000')
 
-	# Jika umur lebih atau sama dengan 16
-	elif (umur >= 16):
-		# Output
-		print('Nilai kalori yang dibenarkan ialah 2050')
+	# if age more or equal to 16
+	elif (age >= 16):
+		# output
+		print('The allowable caloric value is 2050')
 
-	# Jika umur lebih atau sama dengan 13
-	elif (umur >= 13):
-		# Output
-		print('Nilai kalori yang dibenarkan ialah 2180')
+	# if age more or equal to 13
+	elif (age >= 13):
+		# output
+		print('The allowable caloric value is 2180')
 
-	# Jika umur kurang daripada 13
+	# if age less than 13
 	else:
-	  # Output
-		print('Maaf, had umur perlu 13 tahun ke atas.')
+	    # output
+		print('Sorry, age limit must be 13 years and above.')
 
-# Jika tiada input atau salah input
+# if there's no input or wrong input
 else:
-  # Output
-	print('Terima Kasih')
+    # output
+	print('Thank You')
