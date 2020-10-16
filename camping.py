@@ -1,4 +1,5 @@
 # program to calculate the total cost of camping in uniformed units  
+# made by itsmeevil
 
 # variables
 # cost of items in fixed cost

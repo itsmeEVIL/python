@@ -1,4 +1,5 @@
 # program to calculate the average height of 5 members
+# made by itsmeevil
 
 # input
 # height of first member

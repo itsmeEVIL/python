@@ -1,4 +1,5 @@
 # program to calculate the price of the book
+# made by itsmeevil
 
 # variables
 # price of books

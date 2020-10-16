@@ -1,4 +1,5 @@
 # program to find out the number of calories allowed based on gender and age
+# made by itsmeevil
 
 # output
 print('***RECOMMEND THE NUMBER OF CALORIES ALLOWED BASED ON GENDER AND AGE***')

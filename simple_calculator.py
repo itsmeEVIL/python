@@ -1,4 +1,5 @@
 # program to calculate 2 numbers
+# made by itsmeevil
 
 # print the available options
 print("***A Simple Calculator***\n\nCalculator to calculate 2 numbers\nOptions:\n1. Addition (+)\n2. Subtraction (-)\n3. Multiplication (x)\n4. Division (÷)\nNote - You can only choose 1 out of the 4 options\n")
