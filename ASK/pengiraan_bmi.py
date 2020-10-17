@@ -1,5 +1,6 @@
 # Atur cara untuk mengira BMI (Body Mass Index)
-# Kumpulan Syabil & Amir XD
+# Kumpulan Syabil & Amir
+# Dibuat oleh Amir XD
 
 print("***Atur Cara Untuk Mengira BMI Anda***\n")
 

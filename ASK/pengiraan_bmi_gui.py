@@ -1,5 +1,6 @@
 # GUI atur cara untuk mengira BMI (Body Mass Index)
 # Kumpulan Syabil & Amir
+# Dibuat oleh Amir xD
 
 # Python 3.x Only
 # Import module Tkinter
