@@ -137,7 +137,7 @@ window.geometry("%dx%d+0+0" % (w, h)) # set window width & height the same as sc
 frame_tajuk = tk.Frame(window, bg='#99b3ff', bd=5)
 frame_tajuk.place(relx=0.5, rely=0.1, relwidth=0.75, relheight=0.1, anchor='n')
 # Label
-label_tajuk = tk.Label(frame_tajuk, text='KALKULATOR BMI', font=('Arial Bold', 30), bg='white', justify='center')
+label_tajuk = tk.Label(frame_tajuk, text='KALKULATOR BMI', font=('Roboto', 35), bg='white', justify='center')
 label_tajuk.place(relwidth=1, relheight=1)
 
 # Oleh
@@ -145,7 +145,7 @@ label_tajuk.place(relwidth=1, relheight=1)
 frame_oleh = tk.Frame(window, bg='#99b3ff', bd=5)
 frame_oleh.place(relx=0.5, rely=0.23, relwidth=0.20, relheight=0.08, anchor='n')
 # Label
-label_oleh = tk.Label(frame_oleh, text='Oleh: Syabil & Amir', font=('Arial Bold', 15), bg='white', justify='center')
+label_oleh = tk.Label(frame_oleh, text='Oleh: Syabil & Amir', font=('Roboto', 14), bg='white', justify='center')
 label_oleh.place(relwidth=1, relheight=1)
 
 # Input/Entry User
@@ -153,13 +153,13 @@ label_oleh.place(relwidth=1, relheight=1)
 frame_input = tk.Frame(window, bg='#99b3ff', bd=5)
 frame_input.place(relx=0.5, rely=0.37, relwidth=0.75, relheight=0.1, anchor='n')
 # Ketinggian
-input_ketinggian = PlaceholderEntry(frame_input, 'Masukkan Ketinggian Anda (Meter)', font=40, justify='center')
+input_ketinggian = PlaceholderEntry(frame_input, 'Masukkan Ketinggian Anda (Meter)', font=('Roboto', 15), justify='center')
 input_ketinggian.place(relwidth=0.4, relheight=1)
 # Berat
-input_berat = PlaceholderEntry(frame_input, 'Masukkan Berat Anda (KG)', font=40, justify='center')
+input_berat = PlaceholderEntry(frame_input, 'Masukkan Berat Anda (KG)', font=('Roboto', 15), justify='center')
 input_berat.place(relx=0.4, relwidth=0.4, relheight=1)
 # Button 'OK' untuk calculate input yang diberi
-button = tk.Button(frame_input, text="OK", font=10, bg='#e6e6e6', command=kira_bmi)
+button = tk.Button(frame_input, text="OK", font=('Roboto', 15), bg='#e6e6e6', command=kira_bmi)
 button.place(relx=0.8, relheight=1, relwidth=0.2)
 
 # Output
@@ -167,7 +167,7 @@ button.place(relx=0.8, relheight=1, relwidth=0.2)
 frame_output = tk.Frame(window, bg='#99b3ff', bd=5)
 frame_output.place(relx=0.5, rely=0.50, relwidth=0.75, relheight=0.4, anchor='n')
 # Label
-output_bmi = tk.Label(frame_output, text='OUTPUT', font=('Bold', 18), bg='white', fg='black', justify='center')
+output_bmi = tk.Label(frame_output, text='OUTPUT', font=('Roboto', 18), bg='white', fg='black', justify='center')
 output_bmi.place(relwidth=1, relheight=1)
 
 # Jalankan program
