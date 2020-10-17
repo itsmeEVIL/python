@@ -98,6 +98,9 @@ def kira_bmi():
 		# Configure/Edit Label output_bmi
 		output_bmi.config(text="ERROR:\nMasukkan Ketinggian Dan\nBerat Badan Anda!", fg='red')
 
+def enter(event=None):
+	kira_bmi()
+
 
 # Class
 # Placeholder effect ## copied
@@ -161,6 +164,7 @@ input_berat.place(relx=0.4, relwidth=0.4, relheight=1)
 # Button 'OK' untuk calculate input yang diberi
 button = tk.Button(frame_input, text="KIRA", font=('roboto', 15, 'bold'), bg='#e6e6e6', command=kira_bmi)
 button.place(relx=0.8, relheight=1, relwidth=0.2)
+window.bind('<Return>', enter) # call function enter apabila click button enter
 
 # Output
 # Frame
