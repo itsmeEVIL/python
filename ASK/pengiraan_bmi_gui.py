@@ -1,8 +1,8 @@
-# GUI atur cara untuk mengira BMI (Body Mass Index)
+# GUI (Graphical User Interface) atur cara untuk mengira BMI (Body Mass Index)
 # Kumpulan Syabil & Amir
 # Dibuat oleh Amir xD
 
-# Python 3.x Only
+# Python 3.x Sahaja
 # Import module Tkinter
 import tkinter as tk
 from tkinter import ttk
