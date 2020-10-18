@@ -20,7 +20,7 @@ def isfloat(value):
 	except ValueError:
 		return False
 
-# Function - mengira bmi dan mengetahui status sesuatu bmi
+# Function - mengira bmi dan mengetahui kategori sesuatu bmi
 def kira_bmi(event=None):
 	# Dapatkan input daripada entry input_ketinggian
 	tinggi = input_ketinggian.get()
@@ -42,26 +42,26 @@ def kira_bmi(event=None):
 
 			# Jika bmi kurang daripada 18.5
 			if bmi < 18.5:
-				status = "Kurang Berat Badan"
+				kategori = "Kurang Berat Badan"
 
 			# Jika bmi lebih atau sama dengan 18.5 dan kurang daripada 24.9
 			elif bmi >= 18.5 and bmi < 24.9:
-				status = "Berat Badan Normal"
+				kategori = "Berat Badan Normal"
 
 			# Jika bmi lebih atau sama dengan 25.0 dan kurang daripada 29.9
 			elif bmi >= 25.0 and bmi < 29.9:
-				status = "Lebih Berat Badan"
+				kategori = "Lebih Berat Badan"
 
 			# Jika bmi lebih atau sama dengan 30.0
 			elif bmi >= 30.0:
-				status = "Obesiti"
+				kategori = "Obesiti"
 
 			# Tukarkan bmi *float* menjadi string
 			bmi = str(bmi)
 
 			# Output
 			# Configure/Edit Label output_bmi
-			output_bmi.config(text="BMI Anda: " + bmi + "\nDan Anda: " + status,  fg='black')
+			output_bmi.config(text="BMI Anda: " + bmi + "\nDan Anda: " + kategori,  fg='black')
 
 		# Jika tinggi tidak sama dengan float dan berat sama dengan float 
 		elif isfloat(tinggi) == False and isfloat(berat) == True:
