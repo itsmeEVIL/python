@@ -8,8 +8,9 @@ import tkinter as tk
 from tkinter import ttk
 
 
-# ============================FUNCTIONS==============================
-# Function - mengetahui jika value ialah float atau tidak
+# ===============================================FUNCTIONS=======================================================
+
+# Mengetahui jika value ialah float atau tidak
 def isfloat(value):
 	# Jika value sama dengan float return true
 	try:
@@ -20,7 +21,7 @@ def isfloat(value):
 	except ValueError:
 		return False
 
-# Function - mengira bmi dan mengetahui kategori sesuatu bmi
+# Mengira bmi dan mengetahui kategori sesuatu bmi
 def kira_bmi(event=None):
 	# Dapatkan input daripada entry input_ketinggian
 	tinggi = input_ketinggian.get()
@@ -102,7 +103,6 @@ def kira_bmi(event=None):
 # ==============================================================================================================
 # ============================================CLASS=============================================================
 
-# Class
 # Placeholder effect ## copied
 class PlaceholderEntry(ttk.Entry):
 	def __init__(self, container, placeholder, *args, **kwargs):
@@ -131,11 +131,11 @@ class PlaceholderEntry(ttk.Entry):
 # ===========================================TKINTER/WINDOWS===================================================
 
 # Window
-window = tk.Tk() # create empty window
-window.title('Atur Cara Untuk Mengira BMI Anda') # create the window title
-window.configure(bg='#1a75ff') # configure window background color
-w, h = window.winfo_screenwidth(), window.winfo_screenheight() # get screen width & height info
-window.geometry("%dx%d+0+0" % (w, h)) # set window width & height the same as screen's
+window = tk.Tk() # bina window kosong
+window.title('Atur Cara Untuk Mengira BMI Anda') # tukar tajuk window
+window.configure(bg='#1a75ff') # tukar backgroud color untuk window
+w, h = window.winfo_screenwidth(), window.winfo_screenheight() # mendapatkan ketinggian dan lebar screen
+window.geometry("%dx%d+0+0" % (w, h)) # tukar ketinggian dan lebar window sama dengan ketinggian dan lebar screen
 
 # Tajuk
 # Frame
@@ -163,10 +163,10 @@ input_ketinggian.place(relwidth=0.4, relheight=1)
 # Berat
 input_berat = PlaceholderEntry(frame_input, 'Masukkan Berat Anda (KG)', font=('roboto', 15), justify='center')
 input_berat.place(relx=0.4, relwidth=0.4, relheight=1)
-# Button 'KIRA' untuk calculate input yang diberi
+# Button 'KIRA' untuk mengira input yang diberi
 button = tk.Button(frame_input, text="KIRA", font=('roboto', 15, 'bold'), bg='#e6e6e6', command=kira_bmi)
 button.place(relx=0.8, relheight=1, relwidth=0.2)
-window.bind('<Return>', kira_bmi) # call function kira_bmi apabila click enter key
+window.bind('<Return>', kira_bmi) # call function kira_bmi apabila menekan enter key
 
 # Output
 # Frame
@@ -180,4 +180,3 @@ output_bmi.place(relwidth=1, relheight=1)
 window.mainloop()
 
 # ==============================================================================================================
-
