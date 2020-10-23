@@ -1,6 +1,6 @@
-# GUI (Graphical User Interface) atur cara untuk mengira BMI (Body Mass Index)
+# Graphical User Interface (GUI) atur cara untuk mengira Body Mass Index (BMI)
 # Kumpulan Syabil & Amir
-# Dibuat oleh Amir xD
+# Dibuat oleh Amir
 
 # Python 3.x Sahaja
 # Import module Tkinter
@@ -8,7 +8,7 @@ import tkinter as tk
 from tkinter import ttk
 
 
-# FUNCTIONS
+# ============================FUNCTIONS==============================
 # Function - mengetahui jika value ialah float atau tidak
 def isfloat(value):
 	# Jika value sama dengan float return true
@@ -99,6 +99,8 @@ def kira_bmi(event=None):
 		# Configure/Edit Label output_bmi
 		output_bmi.config(text="ERROR:\nMasukkan Ketinggian Dan\nBerat Badan Anda!", fg='red')
 
+# ==============================================================================================================
+# ============================================CLASS=============================================================
 
 # Class
 # Placeholder effect ## copied
@@ -125,6 +127,8 @@ class PlaceholderEntry(ttk.Entry):
 			self.insert("0", self.placeholder)
 			self["style"] = self.placeholder_style
 
+# =============================================================================================================
+# ===========================================TKINTER/WINDOWS===================================================
 
 # Window
 window = tk.Tk() # create empty window
@@ -174,3 +178,6 @@ output_bmi.place(relwidth=1, relheight=1)
 
 # Jalankan program
 window.mainloop()
+
+# ==============================================================================================================
+
