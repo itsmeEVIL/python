@@ -4,7 +4,7 @@
 # import random integer from random module
 from random import randint
 
-print("***Number Guessing Game***\nYou got 5 chance(s) to guess the correct number")
+print("***Number Guessing Game***\nYou only got 5 chances to guess the correct number")
 
 rand_num = randint(1, 10) # make random integer between 1 and 10
 u_inp = int(input("\nChoose a number between 1 and 10: "))
