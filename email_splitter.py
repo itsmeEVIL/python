@@ -3,7 +3,7 @@
 
 print("***Email Splitter***")
 
-email = input("Enter an email: ")
+email = input("\nEnter an email: ")
 
 sliced = email.split("@") # split string at "@" - e.g = ["username", "domain name"]
 
