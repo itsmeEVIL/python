@@ -1,15 +1,16 @@
 # program about rolling dice
 # made by itsmeevil
 
+# import random module
 import random as rd
 
 def roll():
-	rolled = str(rd.randint(1, 6))
+	rolled = str(rd.randint(1, 6)) # generate random integer number between 1 and 6
 	rolled = "Dice rolled. You got " + rolled
-	return rolled
+	return rolled # return rolled variable when function is called
 
 print("***Roll The Dice***")
-ans = input("\nRoll dice? (Y/N): ").lower()
+ans = input("\nRoll dice? (Y/N): ").lower() # lowercase the input
 
 while ans == "y":
 	if ans == "y":
@@ -17,7 +18,7 @@ while ans == "y":
 		ans = input("\nRoll dice again? (Y/N): ")
 		if ans == "n":
 			print("Thanks for using!")
-			quit()
+			quit() # quit from the program entirely
 else:
 	print(":/")
-	quit()
+	quit() # quit from the program entirely
