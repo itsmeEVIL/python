@@ -14,7 +14,7 @@ while chance <= 5:
 	chance -= 1 # minus chance until answer is correct
 	if chance == 0:
 		print("\nYou got no chance left!\nBetter luck next time!")
-		break
+		break # break out from the while loop
 	else:
 		if user_input != random_number:
 			if user_input <= random_number:
@@ -26,4 +26,3 @@ while chance <= 5:
 		else:
 			print("\nGreat job!\nThe number you've guessed, ", user_input, ", is correct.")
 			break # break out from the while loop
-
