@@ -1,10 +1,11 @@
 # program about rock, paper, scissor with computer
 # made by itsmeeevil
 
+# import random module
 import random as rd
 
 def computer():
-	num = rd.randint(1, 3)
+	num = rd.randint(1, 3) # generate random integer between 1 and 3
 	if num == 1:
 		rock = "rock"
 		return rock
@@ -16,13 +17,13 @@ def computer():
 		return scissor
 
 print("***Rock, Paper, Scissor***")
-rounds = 3
+rounds = 3 # rounds at start
 u_score = 0 # user score
 c_score = 0 # computer score
 computer = computer()
 
 while rounds <= 3:
-	rounds -= 1
+	rounds -= 1 # minus 1 round until round = 0
 	user = input("\nChoose (rock/paper/scissor): ").lower()
 	if rounds != 0:
 		if user == "rock":
