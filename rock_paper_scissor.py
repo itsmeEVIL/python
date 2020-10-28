@@ -25,7 +25,7 @@ computer = computer()
 while rounds <= 3:
 	rounds -= 1 # minus 1 round until round = 0
 	user = input("\nChoose (rock/paper/scissor): ").lower()
-	if rounds != 0:
+	if rounds <= 3 and rounds >= 1:
 		if user == "rock":
 			if computer == "scissor":
 				print("\nRock vs Scissor = Win")
@@ -74,7 +74,7 @@ while rounds <= 3:
 			else:
 				print("\nThanks for playing!")
 				quit()
-	else:
+	elif rounds == 0:
 		if u_score > c_score:
 			print("\nFinal score: ", u_score, "-", c_score, "\nCongratulations!\nYou win againts a computer")
 			again = input("\nPlay again? (Y/N): ").lower()
