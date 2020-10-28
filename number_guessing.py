@@ -7,7 +7,7 @@ import random as rd
 print("***Number Guessing Game***\nYou only got 5 chances to guess the correct number")
 
 random_number = rd.randint(1, 10) # make random integer number  between 1 and 10
-user_input = int(input("\nChoose a number between 1 and 10: "))
+user_input = int(input("\nEnter a number between 1 and 10: "))
 chance = 5 
 
 while chance <= 5:
