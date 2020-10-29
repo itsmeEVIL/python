@@ -79,9 +79,9 @@ class PlaceholderEntry(ttk.Entry):
 # ===========================================TKINTER/WINDOWS===================================================
 
 # Window
-window = tk.Tk() # bina window kosong
-window.title('Atur Cara Untuk Mengira BMI Anda') # tukar tajuk window
-window.configure(bg='#1a75ff') # tukar backgroud color untuk window
+window = tk.Tk() # buat window kosong
+window.title('Atur Cara Untuk Mengira BMI Anda') # set tajuk window
+window.configure(bg='#1a75ff') # tukar backgroud color window
 w, h = window.winfo_screenwidth(), window.winfo_screenheight() # mendapatkan ketinggian dan lebar screen
 window.geometry("%dx%d+0+0" % (w, h)) # tukar ketinggian dan lebar window sama dengan ketinggian dan lebar screen
 
