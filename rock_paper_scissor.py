@@ -73,8 +73,7 @@ while rounds <= 3:
 			if rounds == 0:
 				scored()
 		elif computer == "rock":
-			print("\nRock vs Rock = Tie\nAdded 1 more round")
-			rounds += 1
+			print("\nRock vs Rock = Tie")
 			print("Round(s) left: ", rounds)
 			if rounds == 0:
 				scored()
@@ -92,8 +91,7 @@ while rounds <= 3:
 			if rounds == 0:
 				scored()
 		elif computer == "paper":
-			print("\nPaper vs Paper = Tie\nAdded 1 more round")
-			rounds += 1
+			print("\nPaper vs Paper = Tie")
 			print("Round(s) left: ", rounds)
 			if rounds == 0:
 				scored()
@@ -111,8 +109,7 @@ while rounds <= 3:
 			if rounds == 0:
 				scored()
 		elif computer == "scissor":
-			print("\nScissor vs Scissor = Tie\nAdded 1 more round")
-			rounds += 1
+			print("\nScissor vs Scissor = Tie")
 			print("Round(s) left: ", rounds)
 			if rounds == 0:
 				scored()
