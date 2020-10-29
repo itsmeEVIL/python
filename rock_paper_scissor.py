@@ -2,19 +2,17 @@
 # made by itsmeeevil
 
 # import random module
-import random as rd
+import random
 
-def computer():
-	num = rd.randint(1, 3) # generate random integer between 1 and 3
-	if num == 1:
-		rock = "rock"
-		return rock
-	elif num == 2:
-		paper = "paper"
-		return paper
-	elif num == 3:
-		scissor = "scissor"
-		return scissor
+print("***Rock, Paper, Scissor***\nThere are 3 rounds, the winner\nwill be dicided by the most score\nafter those 3 rounds.")
+
+u_score = 0 # user score
+c_score = 0 # computer score
+
+def x_rounds():
+	global rounds
+	rounds = int(input("\nHow many round(s) do you want to play?: "))
+	return rounds
 
 def scored():
 	global u_score, c_score, rounds
@@ -24,7 +22,7 @@ def scored():
 		if again == "y":
 			u_score = 0 # reset scores
 			c_score = 0 # reset scores
-			rounds = 3 # reset rounds
+			x_rounds()
 		else:
 			print("\nThanks for playing!")
 			quit()
@@ -34,7 +32,7 @@ def scored():
 		if again == "y":
 			u_score = 0 # reset scores
 			c_score = 0 # reset scores
-			rounds = 3 # reset rounds
+			x_rounds()
 		else:
 			print("\nThanks for playing!")
 			quit()
@@ -44,19 +42,20 @@ def scored():
 		if again == "y":
 			u_score = 0 # reset scores
 			c_score = 0 # reset scores
-			rounds = 3 # reset rounds
+			x_rounds()
 		else:
 			print("\nThanks for playing!")
 			quit()
 
-print("***Rock, Paper, Scissor***\nThere are 3 rounds, the winner\nwill be dicided by the most score\nafter those 3 rounds.")
+for i in range(0, x_rounds()):
+	num = random.randint(1, 3)
+	if num == 1:
+		computer = "rock"
+	elif num == 2:
+		computer = "paper"
+	else:
+		computer = "scissor"
 
-computer = computer()
-rounds = 3 # rounds at start
-u_score = 0 # user score
-c_score = 0 # computer score
-
-while rounds <= 3:
 	rounds -= 1 # minus 1 round until round = 0
 	user = input("\nChoose (rock/paper/scissor): ").lower()
 	if user == "rock":
@@ -119,7 +118,8 @@ while rounds <= 3:
 		if again == "y":
 			u_score = 0 # reset scores
 			c_score = 0 # reset scores
-			rounds = 3 # reset rounds
+			x_rounds()
 		else:
 			print("\nThanks for playing!")
 			quit()
+
