@@ -10,6 +10,17 @@ from tkinter import ttk
 
 # ===============================================FUNCTIONS=======================================================
 
+# Mengetahui jika value ialah float atau tidak
+def isfloat(value):
+	# Jika value sama dengan float return true
+	try:
+		float(value)
+		return True
+
+	# Jika value tidak sama dengan float return false
+	except ValueError:
+		return False
+
 # Mengira bmi dan mengetahui kategori sesuatu bmi
 def kira_bmi(event=None):
 	# Dapatkan input daripada entry input_ketinggian
@@ -17,36 +28,77 @@ def kira_bmi(event=None):
 	# Dapatkan input daripada entry input_berat
 	berat = input_berat.get()
 
-	# Tukar string kepada nombor
-	berat = float(berat)
-	tinggi = float(tinggi)
-	# Pengiraan BMI
-	bmi = berat / (tinggi * tinggi)
-	# Bundarkan bmi kepada 2 tempat perpuluhan
-	bmi = round(bmi, 2)
+	# Note - != bermaksud tidak sama dengan
+	# Jika input tinggi tidak sama dengan "" dan berat tidak sama dengan ""
+	if tinggi != "" and berat != "":
+		# Jika tinggi sama dengan float dan berat sama dengan float
+		if isfloat(tinggi) == True and isfloat(berat) == True:
+			# Tukar string kepada nombor
+			berat = float(berat)
+			tinggi = float(tinggi)
+			# Pengiraan BMI
+			bmi = berat / (tinggi * tinggi)
+			# Bundarkan bmi kepada 2 tempat perpuluhan
+			bmi = round(bmi, 2)
 
-	# Jika bmi kurang daripada 18.5
-	if bmi < 18.5:
-		kategori = "Kurang Berat Badan"
+			# Jika bmi kurang daripada 18.5
+			if bmi < 18.5:
+				kategori = "Kurang Berat Badan"
 
-	# Jika bmi lebih atau sama dengan 18.5 dan kurang daripada 24.9
-	elif bmi >= 18.5 and bmi < 24.9:
-		kategori = "Berat Badan Normal"
+			# Jika bmi lebih atau sama dengan 18.5 dan kurang daripada 24.9
+			elif bmi >= 18.5 and bmi < 24.9:
+				kategori = "Berat Badan Normal"
 
-	# Jika bmi lebih atau sama dengan 25.0 dan kurang daripada 29.9
-	elif bmi >= 25.0 and bmi < 29.9:
-		kategori = "Lebih Berat Badan"
+			# Jika bmi lebih atau sama dengan 25.0 dan kurang daripada 29.9
+			elif bmi >= 25.0 and bmi < 29.9:
+				kategori = "Lebih Berat Badan"
 
-	# Jika bmi lebih atau sama dengan 30.0
-	elif bmi >= 30.0:
-		kategori = "Obesiti"
+			# Jika bmi lebih atau sama dengan 30.0
+			elif bmi >= 30.0:
+				kategori = "Obesiti"
 
-	# Tukarkan bmi *float* menjadi string
-	bmi = str(bmi)
+			# Tukarkan bmi *float* menjadi string
+			bmi = str(bmi)
 
-	# Output
-	# Configure/Edit Label output_bmi
-	output_bmi.config(text="BMI Anda: " + bmi + "\nDan Anda: " + kategori,  fg='black')
+			# Output
+			# Configure/Edit Label output_bmi
+			output_bmi.config(text="BMI Anda: " + bmi + "\nDan Anda: " + kategori,  fg='black')
+
+		# Jika tinggi tidak sama dengan float dan berat sama dengan float 
+		elif isfloat(tinggi) == False and isfloat(berat) == True:
+			# Output
+			# Configure/Edit Label output_bmi
+			output_bmi.config(text="ERROR:\nMasukkan Ketinggian Anda\nDengan Betul (Nombor)!", fg='red')
+
+		# Jika tinggi sama dengan float dan berat tidak sama dengan float
+		elif isfloat(tinggi) == True and isfloat(berat) == False:
+			# Output
+			# Configure/Edit Label output_bmi
+			output_bmi.config(text="ERROR:\nMasukkan Berat Badan Anda\nDengan Betul (Nombor)!", fg='red')
+
+		# Jika tinggi tidak sama dengan float dan berat tidak sama dengan float
+		else:
+			# Output
+			# Configure/Edit Label output_bmi
+			output_bmi.config(text="ERROR:\nMasukkan Ketinggian Dan Berat\nBadan Anda Dengan Betul (Nombor)!", fg='red') 
+
+	# Jika input tinggi tidak sama dengan "" dan berat sama dengan ""
+	elif tinggi != "" and berat == "":
+		# Output
+		# Configure/Edit Label output_bmi
+		output_bmi.config(text="ERROR:\nMasukkan Berat Badan Anda!", fg='red')
+
+	# Jika input tinggi sama dengan "" dan berat tidak sama dengan ""
+	elif tinggi == "" and berat != "":
+		# Output
+		# Configure/Edit Label output_bmi
+		output_bmi.config(text="ERROR:\nMasukkan Ketinggian Anda!", fg='red')
+
+	# Jika input tinggi sama dengan "" dan berat sama dengan ""
+	else:
+		# Output
+		# Configure/Edit Label output_bmi
+		output_bmi.config(text="ERROR:\nMasukkan Ketinggian Dan\nBerat Badan Anda!", fg='red')
 
 # ==============================================================================================================
 # ============================================CLASS=============================================================
