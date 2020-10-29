@@ -29,7 +29,7 @@ def scored():
 			print("\nThanks for playing!")
 			quit()
 	elif u_score < c_score:
-		print("\nFinal score: ", u_score, "-", c_score, "\nYou lose againts the computer\nBetter luck next time")
+		print("\nFinal score: ", u_score, "-", c_score, "\nYou lose to the computer\nBetter luck next time")
 		again = input("\nPlay again? (Y/N): ").lower()
 		if again == "y":
 			u_score = 0 # reset scores
@@ -120,8 +120,8 @@ while rounds <= 3:
 		print("\nCheck your spelling!")
 		again = input("Try again? (Y/N): ").lower()
 		if again == "y":
-			u_score = 0 # reset score
-			c_score = 0 # reset score
+			u_score = 0 # reset scores
+			c_score = 0 # reset scores
 			rounds = 3 # reset rounds
 		else:
 			print("\nThanks for playing!")
