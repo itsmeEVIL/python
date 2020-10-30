@@ -25,7 +25,7 @@ def try_again():
 		c_score = 0 # reset scores
 		rounds = 0 # reset rounds
 		x_rounds = input("\nHow many round(s) do you want to play?: ")
-		if isnum(x_rounds) == True:
+		if isnum(x_rounds) is True:
 			rounds = x_rounds
 			play(int(rounds))
 		else:
@@ -46,7 +46,7 @@ def play_again():
 		c_score = 0 # reset scores
 		rounds = 0 # reset rounds
 		x_rounds = int(input("\nHow many round(s) do you want to play?: "))
-		if isnum(x_rounds) == True:
+		if isnum(x_rounds) is True:
 			rounds = x_rounds
 			play(int(rounds))
 		else:
@@ -143,7 +143,7 @@ def play(rounds):
 			print("\nCheck your spelling!")
 			try_again()
 
-if isnum(rounds) == True:
+if isnum(rounds) is True:
 	play(int(rounds))
 else:
 	print("ERROR:\nPlease enter in how many round(s) do you want to play!")
