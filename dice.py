@@ -18,7 +18,7 @@ while ans == "y":
 		ans = input("\nRoll dice again? (Y/N): ")
 		if ans == "n":
 			print("Thanks for using!")
-			break # break from the loop
+			break
 else:
 	print(":/")
-	break # break from the loop
+	break
