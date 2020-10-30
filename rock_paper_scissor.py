@@ -4,11 +4,39 @@
 # import random module
 import random
 
-print("***Rock, Paper, Scissor***\nThere are 3 rounds, the winner\nwill be dicided by the most score\nafter those 3 rounds.")
+print("***Rock, Paper, Scissor***")
 
 u_score = 0 # user score
 c_score = 0 # computer score
-rounds = int(input("\nHow many round(s) do you want to play?: "))
+rounds = input("\nHow many round(s) do you want to play?: ")
+
+def isnum(value):
+	try:
+		int(value)
+		return True
+	except ValueError:
+		return False
+
+def try_again():
+	global u_score, c_score, rounds
+	again = input("\nTry again? (Y/N): ").lower()
+	if again == "y":
+		u_score = 0 # reset scores
+		c_score = 0 # reset scores
+		rounds = 0 # reset rounds
+		x_rounds = input("\nHow many round(s) do you want to play?: ")
+		if isnum(x_rounds) == True:
+			rounds = x_rounds
+			play(int(rounds))
+		else:
+			print("ERROR:\nPlease enter in how many round(s) do you want to play!")
+			try_again()
+	elif again == "n":
+		print("\nThanks for playing!")
+		quit()
+	else:
+		print("ERROR:\nPlease enter Y or N only!")
+		try_again()
 
 def play_again():
 	global u_score, c_score, rounds
@@ -18,16 +46,23 @@ def play_again():
 		c_score = 0 # reset scores
 		rounds = 0 # reset rounds
 		x_rounds = int(input("\nHow many round(s) do you want to play?: "))
-		rounds = x_rounds
-		play(rounds)
-	else:
+		if isnum(x_rounds) == True:
+			rounds = x_rounds
+			play(int(rounds))
+		else:
+			print("ERROR:\nPlease enter in how many round(s) do you want to play!")
+			try_again()
+	elif again == "n":
 		print("\nThanks for playing!")
 		quit()
+	else:
+		print("ERROR:\nPlease enter Y or N only!")
+		try_again()
 
 def scored():
 	global u_score, c_score, rounds
 	if u_score > c_score:
-		print("\nFinal score: ", u_score, "-", c_score, "\nCongratulations!\nYou win againts the computer")
+		print("\nFinal score: ", u_score, "-", c_score, "\nCongratulations!\nYou won againts the computer")
 		play_again()
 	elif u_score < c_score:
 		print("\nFinal score: ", u_score, "-", c_score, "\nYou lose to the computer\nBetter luck next time")
@@ -101,12 +136,15 @@ def play(rounds):
 					scored()
 			elif computer == "scissor":
 				print("\nScissor vs Scissor = Tie")
-				print("Round(s) left: ", rounds)
+				print("Round(s) l eft: ", rounds)
 				if rounds == 0:
 					scored()
 		else:
 			print("\nCheck your spelling!")
-			play_again()
-	return rounds
+			try_again()
 
-play(rounds)
+if isnum(rounds) == True:
+	play(int(rounds))
+else:
+	print("ERROR:\nPlease enter in how many round(s) do you want to play!")
+	try_again()
