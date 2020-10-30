@@ -10,7 +10,7 @@ u_score = 0 # user score
 c_score = 0 # computer score
 rounds = input("\nHow many round(s) do you want to play?: ")
 
-def isnum(value):
+def isnum(value): # to check whether a value is an int or not
 	try:
 		int(value)
 		return True
