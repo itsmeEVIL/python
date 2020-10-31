@@ -1,3 +1,5 @@
 # Python
-This is a collection of python programs that i have made while learning it.
+Bunch of Python programs that i have made while learning it.
 
+## Technology Used
+- Python3
