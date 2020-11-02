@@ -11,12 +11,12 @@ print("Checking...")
 
 time.sleep(2) # using the function sleep from time module to sleep for 2 seconds
 
-if (year % 4) == 0: # if there's no remainder after dividing year by 4
+if (year % 4) == 0:
 	print("\nThe year entered is a leap year.")
-	if (year % 100) == 0: # if there's no remainder after dividing year by 100
+	if (year % 100) == 0:
 		print("\nThe year entered is not a leap year.")
-	else: # if there's remainder after dividing year by 100
-		if (year % 400) == 0: # if there's no remainder after dividing year by 400
+	else:
+		if (year % 400) == 0:
 			print("\nThe year entered is a leap year.")
-else: # if there's remainder after dividing year by 4
+else:
 	print("\nThe year entered is not a leap year.")
