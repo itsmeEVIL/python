@@ -1,6 +1,10 @@
 # program to know if this year is a leap year
 # made by itsmeevil
 
+# the year that can be evenly divisible by 4
+# the year that can't be evenly divisible by 100
+# the year that can be evenly divisible by 400
+
 # import time module for time delay
 import time
 
