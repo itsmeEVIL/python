@@ -13,9 +13,9 @@ def equal():
 	try: 
 		global expression 
 
-		total = str(eval(expression))
-		output_label.configure(text=total)
-		expression = "" 
+		total = str(round(eval(expression), 3))
+		output_label.configure(text=expression + "=" + total)
+		expression = ""
 
 	except: 
 		output_label.configure(text="ERROR")
@@ -25,7 +25,7 @@ def clear():
 	global expression
 
 	expression = ""
-	output_label.configure(text="")
+	output_label.configure(text="Enter the number here...")
 
 # blank window
 root = Tk()
@@ -41,7 +41,7 @@ lower_frame = Frame(root, bg="#D8E0E2", bd=5)
 lower_frame.place(relx=0.5, rely=1, relwidth=1, relheight=0.8, anchor="s")
 
 # output / upper label
-output_label = Label(upper_frame, text="", font=("roboto", 17, "bold"), bg="#D1DCBA", bd=5)
+output_label = Label(upper_frame, text="Enter the number here...", font=("roboto", 17, "bold"), bg="#D1DCBA", fg="#64773c", bd=5)
 output_label.place(relwidth=1, relheight=1)
 
 # input / lower button
@@ -57,7 +57,7 @@ button_7 = Button(lower_frame, text="7", font=("roboto", 18), bg="#7998AC", fg="
 button_8 = Button(lower_frame, text="8", font=("roboto", 18), bg="#7998AC", fg="#f2f2f2", activebackground="#61869e", activeforeground="#f2f2f2", relief="flat", command=lambda:press(8)).place(relx=0.25, rely=0.50, relwidth=0.25, relheight=0.25)
 button_9 = Button(lower_frame, text="9", font=("roboto", 18), bg="#7998AC", fg="#f2f2f2", activebackground="#61869e", activeforeground="#f2f2f2", relief="flat", command=lambda:press(9)).place(relx=0.50, rely=0.50, relwidth=0.25, relheight=0.25)
 button_multiply = Button(lower_frame, text="*", font=("roboto", 18), bg="#7998AC", fg="#f2f2f2", activebackground="#61869e", activeforeground="#f2f2f2", relief="flat", command=lambda:press("*")).place(relx=0.75, rely=0.50, relwidth=0.25, relheight=0.25)
-button_clear = Button(lower_frame, text="C", font=("roboto", 18), bg="#7998AC", fg="#f2f2f2", activebackground="#61869e", activeforeground="#f2f2f2", relief="flat", command=clear).place(relx=0, rely=0.75, relwidth=0.25, relheight=0.25)
+button_clear = Button(lower_frame, text="C", font=("roboto", 18), bg="#4D738A", fg="#f2f2f2", activebackground="#405f72", activeforeground="#f2f2f2", relief="flat", command=clear).place(relx=0, rely=0.75, relwidth=0.25, relheight=0.25)
 button_0 = Button(lower_frame, text="0", font=("roboto", 18), bg="#7998AC", fg="#f2f2f2", activebackground="#61869e", activeforeground="#f2f2f2", relief="flat", command=lambda:press(0)).place(relx=0.25, rely=0.75, relwidth=0.25, relheight=0.25)
 button_calc = Button(lower_frame, text="=", font=("roboto", 18), bg="#FD8103", fg="#f2f2f2", activebackground="#e37302", activeforeground="#f2f2f2", relief="flat", command=equal).place(relx=0.50, rely=0.75, relwidth=0.25, relheight=0.25)
 button_divide = Button(lower_frame, text="/", font=("roboto", 18), bg="#7998AC", fg="#f2f2f2", activebackground="#61869e", activeforeground="#f2f2f2", relief="flat", command=lambda:press("/")).place(relx=0.75, rely=0.75, relwidth=0.25, relheight=0.25)
