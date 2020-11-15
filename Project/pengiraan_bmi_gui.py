@@ -62,43 +62,43 @@ def kira_bmi(event=None):
 
 			# Output
 			# Configure/Edit Label output_bmi
-			output_bmi.config(text="BMI Anda: " + bmi + "\nDan Anda: " + kategori,  fg='black')
+			output_bmi.config(text="BMI Anda: " + bmi + "\nDan Anda: " + kategori,  fg="black")
 
 		# Jika tinggi tidak sama dengan float dan berat sama dengan float 
 		elif isfloat(tinggi) == False and isfloat(berat) == True:
 			# Output
 			# Configure/Edit Label output_bmi
-			output_bmi.config(text="ERROR:\nMasukkan Ketinggian Anda\nDengan Betul (Nombor)!", fg='red')
+			output_bmi.config(text="ERROR:\nMasukkan Ketinggian Anda\nDengan Betul (Nombor)!", fg="red")
 
 		# Jika tinggi sama dengan float dan berat tidak sama dengan float
 		elif isfloat(tinggi) == True and isfloat(berat) == False:
 			# Output
 			# Configure/Edit Label output_bmi
-			output_bmi.config(text="ERROR:\nMasukkan Berat Badan Anda\nDengan Betul (Nombor)!", fg='red')
+			output_bmi.config(text="ERROR:\nMasukkan Berat Badan Anda\nDengan Betul (Nombor)!", fg="red")
 
 		# Jika tinggi tidak sama dengan float dan berat tidak sama dengan float
 		else:
 			# Output
 			# Configure/Edit Label output_bmi
-			output_bmi.config(text="ERROR:\nMasukkan Ketinggian Dan Berat\nBadan Anda Dengan Betul (Nombor)!", fg='red') 
+			output_bmi.config(text="ERROR:\nMasukkan Ketinggian Dan Berat\nBadan Anda Dengan Betul (Nombor)!", fg="red") 
 
 	# Jika input tinggi tidak sama dengan "" dan berat sama dengan ""
 	elif tinggi != "" and berat == "":
 		# Output
 		# Configure/Edit Label output_bmi
-		output_bmi.config(text="ERROR:\nMasukkan Berat Badan Anda!", fg='red')
+		output_bmi.config(text="ERROR:\nMasukkan Berat Badan Anda!", fg="red")
 
 	# Jika input tinggi sama dengan "" dan berat tidak sama dengan ""
 	elif tinggi == "" and berat != "":
 		# Output
 		# Configure/Edit Label output_bmi
-		output_bmi.config(text="ERROR:\nMasukkan Ketinggian Anda!", fg='red')
+		output_bmi.config(text="ERROR:\nMasukkan Ketinggian Anda!", fg="red")
 
 	# Jika input tinggi sama dengan "" dan berat sama dengan ""
 	else:
 		# Output
 		# Configure/Edit Label output_bmi
-		output_bmi.config(text="ERROR:\nMasukkan Ketinggian Dan\nBerat Badan Anda!", fg='red')
+		output_bmi.config(text="ERROR:\nMasukkan Ketinggian Dan\nBerat Badan Anda!", fg="red")
 
 # ==============================================================================================================
 # ============================================CLASS=============================================================
@@ -132,48 +132,48 @@ class PlaceholderEntry(ttk.Entry):
 
 # Window
 window = Tk() # bina window kosong
-window.title('Atur Cara Untuk Mengira BMI Anda') # tukar tajuk window
-window.configure(bg='#1a75ff') # tukar backgroud color untuk window
+window.title("Atur Cara Untuk Mengira BMI Anda") # tukar tajuk window
+window.configure(bg="#1a75ff") # tukar backgroud color untuk window
 w, h = window.winfo_screenwidth(), window.winfo_screenheight() # mendapatkan ketinggian dan lebar screen
 window.geometry("%dx%d+0+0" % (w, h)) # tukar ketinggian dan lebar window sama dengan ketinggian dan lebar screen
 
 # Tajuk
 # Frame
-frame_tajuk = Frame(window, bg='#99b3ff', bd=5)
-frame_tajuk.place(relx=0.5, rely=0.1, relwidth=0.75, relheight=0.1, anchor='n')
+frame_tajuk = Frame(window, bg="#99b3ff", bd=5)
+frame_tajuk.place(relx=0.5, rely=0.1, relwidth=0.75, relheight=0.1, anchor="n")
 # Label
-label_tajuk = Label(frame_tajuk, text='KALKULATOR BMI', font=('roboto', 30, 'bold'), bg='white', justify='center')
+label_tajuk = Label(frame_tajuk, text="KALKULATOR BMI", font=("roboto", 30, "bold"), bg="white", justify="center")
 label_tajuk.place(relwidth=1, relheight=1)
 
 # Oleh
 # Frame
-frame_oleh = Frame(window, bg='#99b3ff', bd=5)
-frame_oleh.place(relx=0.5, rely=0.23, relwidth=0.20, relheight=0.08, anchor='n')
+frame_oleh = Frame(window, bg="#99b3ff", bd=5)
+frame_oleh.place(relx=0.5, rely=0.23, relwidth=0.20, relheight=0.08, anchor="n")
 # Label
-label_oleh = Label(frame_oleh, text='Oleh: Syabil & Amir', font=('roboto', 14), bg='white', justify='center')
+label_oleh = Label(frame_oleh, text="Oleh: Syabil & Amir", font=("roboto", 14), bg="white", justify="center")
 label_oleh.place(relwidth=1, relheight=1)
 
 # Input/Entry User
 # Frame
-frame_input = Frame(window, bg='#99b3ff', bd=5)
-frame_input.place(relx=0.5, rely=0.37, relwidth=0.75, relheight=0.1, anchor='n')
+frame_input = Frame(window, bg="#99b3ff", bd=5)
+frame_input.place(relx=0.5, rely=0.37, relwidth=0.75, relheight=0.1, anchor="n")
 # Ketinggian
-input_ketinggian = PlaceholderEntry(frame_input, 'Masukkan Ketinggian Anda (Meter)', font=('roboto', 15), justify='center')
+input_ketinggian = PlaceholderEntry(frame_input, "Masukkan Ketinggian Anda (Meter)", font=("roboto", 15), justify="center")
 input_ketinggian.place(relwidth=0.4, relheight=1)
 # Berat
-input_berat = PlaceholderEntry(frame_input, 'Masukkan Berat Anda (KG)', font=('roboto', 15), justify='center')
+input_berat = PlaceholderEntry(frame_input, "Masukkan Berat Anda (KG)", font=("roboto", 15), justify="center")
 input_berat.place(relx=0.4, relwidth=0.4, relheight=1)
-# Button 'KIRA' untuk mengira input yang diberi
-button = Button(frame_input, text="KIRA", font=('roboto', 15, 'bold'), bg='#e6e6e6', command=kira_bmi)
+# Button "KIRA" untuk mengira input yang diberi
+button = Button(frame_input, text="KIRA", font=("roboto", 15, "bold"), bg="#e6e6e6", command=kira_bmi)
 button.place(relx=0.8, relheight=1, relwidth=0.2)
-window.bind('<Return>', kira_bmi) # call function kira_bmi apabila menekan enter key
+window.bind("<Return>", kira_bmi) # call function kira_bmi apabila menekan enter key
 
 # Output
 # Frame
-frame_output = Frame(window, bg='#99b3ff', bd=5)
-frame_output.place(relx=0.5, rely=0.50, relwidth=0.75, relheight=0.4, anchor='n')
+frame_output = Frame(window, bg="#99b3ff", bd=5)
+frame_output.place(relx=0.5, rely=0.50, relwidth=0.75, relheight=0.4, anchor="n")
 # Label
-output_bmi = Label(frame_output, text='OUTPUT', font=('roboto', 28, 'bold'), bg='white', fg='black', justify='center')
+output_bmi = Label(frame_output, text="OUTPUT", font=("roboto", 28, "bold"), bg="white", fg="black", justify="center")
 output_bmi.place(relwidth=1, relheight=1)
 
 # Jalankan program
