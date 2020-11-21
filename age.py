@@ -10,4 +10,4 @@ print("***Age Calculator***\n")
 birthday = int(input("Enter the year you were born: "))
 age = current_year - birthday
 
-print("\nYour age is", age)
+print(f"\nYour age is {age}")
