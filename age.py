@@ -5,7 +5,7 @@ import datetime
 
 current_year = datetime.datetime.now().year
 
-print("Age Calculator\n")
+print("***Age Calculator***\n")
 
 birthday = int(input("Enter the year you were born: "))
 age = current_year - birthday
