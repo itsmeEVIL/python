@@ -1,5 +1,4 @@
 # program to calculate your age base on the year you were born
-# made by itsmeevil
 
 import datetime
 
