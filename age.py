@@ -1,4 +1,5 @@
 # program to calculate your age base on the year you were born
+# made by itsmeevil
 
 import datetime
 
@@ -9,4 +10,4 @@ print("Age Calculator\n")
 birthday = int(input("Enter the year you were born: "))
 age = current_year - birthday
 
-print("\nYour age is ", age)
+print("\nYour age is", age)
