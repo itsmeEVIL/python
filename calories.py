@@ -3,10 +3,10 @@
 
 print("***RECOMMEND THE NUMBER OF CALORIES ALLOWED BASED ON GENDER AND AGE***")
 
-gender = input("\nEnter Your Gender (MALE/FEMALE): ")
+gender = input("\nEnter Your Gender (MALE/FEMALE): ").lower()
 age = input("Enter your age: ")
 
-if gender.lower() == "male":
+if gender == "male":
 	if age >= "60":
 		print("\nThe allowed caloric value is 2010")
 	elif age >= "30":
@@ -19,7 +19,7 @@ if gender.lower() == "male":
 		print("\nThe allowed caloric value is 2690")
 	else:
 		print("\nSorry, age limit must be 13 years and above.")
-elif gender.lower() == "female":
+elif gender == "female":
 	if age >= "60":
 		print("\nThe allowed caloric value is 1780")
 	elif age >= "30":
