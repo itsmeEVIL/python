@@ -5,9 +5,6 @@ print("***Email Splitter***")
 
 email = input("\nEnter an email: ")
 
-sliced = email.split("@") # split string at "@" - e.g = ["username", "domain name"]
+sliced = email.split("@") # split string at "@" which will put it in an array- ["username", "domain name"]
 
-username = sliced[0] # get username from sliced array
-domain_name = sliced[1] # get domain name from sliced arrray
-
-print("\nUsername: ", username, "\nDomain name: ", domain_name) # but ofc i can also get array info here
+print(f"\nUsername: {sliced[0]}\nDomain name: {sliced[1]}")
