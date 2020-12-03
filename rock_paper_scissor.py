@@ -73,7 +73,7 @@ def scored():
 
 def play(rounds):
 	global u_score, c_score
-	for i in range(0, rounds):
+	for _ in range(rounds):
 		num = random.randint(1, 3)
 		if num == 1:
 			computer = "rock"
@@ -81,18 +81,12 @@ def play(rounds):
 			computer = "paper"
 		else:
 			computer = "scissor"
-	
+
 		rounds -= 1 # minus 1 round until round = 0
 		user = input("\nChoose (rock/paper/scissor): ").lower()
-		
+
 		if user == "rock":
-			if computer == "scissor":
-				print("\nRock vs Scissor = Win")
-				print("Round(s) left: ", rounds)
-				u_score += 1
-				if rounds == 0:
-					scored()
-			elif computer == "paper":
+			if computer == "paper":
 				print("\nRock vs Paper = Lose")
 				print("Round(s) left: ", rounds)
 				c_score += 1
@@ -103,8 +97,19 @@ def play(rounds):
 				print("Round(s) left: ", rounds)
 				if rounds == 0:
 					scored()
+			elif computer == "scissor":
+				print("\nRock vs Scissor = Win")
+				print("Round(s) left: ", rounds)
+				u_score += 1
+				if rounds == 0:
+					scored()
 		elif user == "paper":
-			if computer == "rock":
+			if computer == "paper":
+				print("\nPaper vs Paper = Tie")
+				print("Round(s) left: ", rounds)
+				if rounds == 0:
+					scored()
+			elif computer == "rock":
 				print("\nPaper vs Rock = Win")
 				print("Round(s) left: ", rounds)
 				u_score += 1
@@ -114,11 +119,6 @@ def play(rounds):
 				print("\nPaper vs Scissor = Lose")
 				print("Round(s) left: ", rounds)
 				c_score += 1
-				if rounds == 0:
-					scored()
-			elif computer == "paper":
-				print("\nPaper vs Paper = Tie")
-				print("Round(s) left: ", rounds)
 				if rounds == 0:
 					scored()
 		elif user == "scissor":
