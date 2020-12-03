@@ -16,9 +16,12 @@ print("Checking...")
 time.sleep(2) # using the function sleep from time module to sleep for 2 seconds
 
 if (year % 4) == 0:
-	if (year % 400) == 0 or year % 100 != 0:
-		print(f"\nThe year {year} is a leap year.")
+	if (year % 100) == 0:
+		if (year % 400) == 0:
+			print(f"\nThe year {year} is a leap year.")
+		else:
+			print(f"\nThe year {year} is not a leap year.")
 	else:
-		print(f"\nThe year {year} is not a leap year.")
+		print(f"\nThe year {year} is a leap year.")
 else:
 	print(f"\nThe year {year} is not a leap year.")

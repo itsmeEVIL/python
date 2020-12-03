@@ -12,13 +12,17 @@ chance = 5
 while chance <= 5:
 	chance -= 1 # minus chance until answer is correct
 	if user_input != random_number:
-		if chance == 0:
-			print("\nYou got no chance left!\nBetter luck next time!")
-			break
-		else:
-			if user_input <= random_number:
+		if user_input <= random_number:
+			if chance == 0:
+				print("\nYou got no chance left!\nBetter luck next time!")
+				break
+			else:
 				print(f"\nNumber entered is smaller than the generated number!\nYou got {chance} chance(s) left!")
 				user_input = int(input("Enter a bigger number: "))
+		else:
+			if chance == 0:
+				print("\nYou got no chance left!\nBetter luck next time!")
+				break
 			else:
 				print(f"\nNumber entered is bigger than the number generated!\nYou got {chance} chance(s) left!")
 				user_input = int(input("Enter a smaller number: "))
