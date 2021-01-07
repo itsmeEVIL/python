@@ -8,24 +8,24 @@ arithmetic = input("Enter the option (1/2/3/4): ")
 num2 = float(input("Enter the second number: "))
 
 if arithmetic == "1":
-	res = num1 + num2
+    res = num1 + num2
 
-	print(f"\nCalculation:\n{num1} + {num2} = {res}")
-	print(f"\nResult:\nThe sum of {num1} and {num2} is {res}")
+    print(f"\nCalculation:\n{num1} + {num2} = {res}")
+    print(f"\nResult:\nThe sum of {num1} and {num2} is {res}")
 elif arithmetic == "2":
-	res = num1 - num2
+    res = num1 - num2
 
-	print(f"\nCalculation:\n{num1} - {num2} = {res}")
-	print(f"\nResult:\nThe subtraction of {num1} and {num2} is {res}")
+    print(f"\nCalculation:\n{num1} - {num2} = {res}")
+    print(f"\nResult:\nThe subtraction of {num1} and {num2} is {res}")
 elif arithmetic == "3":
-	res = num1 * num2
+    res = num1 * num2
 
-	print(f"\nCalculation:\n{num1} × {num2} = {res}")
-	print(f"\nResult:\nThe multiplication of {num1} and {num2} is {res}")
+    print(f"\nCalculation:\n{num1} × {num2} = {res}")
+    print(f"\nResult:\nThe multiplication of {num1} and {num2} is {res}")
 elif arithmetic == "4":
-	res = num1 / num2
+    res = num1 / num2
 
-	print(f"\nCalculation:\n{num1} ÷ {num2} = {res}")
-	print(f"\nResult:\nThe division of {num1} and {num2} is {res}")
+    print(f"\nCalculation:\n{num1} ÷ {num2} = {res}")
+    print(f"\nResult:\nThe division of {num1} and {num2} is {res}")
 else:
-	print("\nERROR:\nEnter the correct arithmetic (1/2/3/4)!")
+    print("\nERROR:\nEnter the correct arithmetic (1/2/3/4)!")
