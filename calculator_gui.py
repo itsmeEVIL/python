@@ -7,34 +7,34 @@ from tkinter import *
 expression = ""
 
 def press(num):
-	global expression
+    global expression
 
-	expression = expression + str(num)
-	output_label.configure(text=expression)
+    expression = expression + str(num)
+    output_label.configure(text=expression)
 
 def operator(symbol):
-	global expression
+    global expression
 
-	expression = expression + " " + str(symbol) + " "
-	output_label.configure(text=expression)
+    expression = expression + " " + str(symbol) + " "
+    output_label.configure(text=expression)
 
 def equal():
-	try:
-		global expression
+    try:
+        global expression
 
-		total = str(round(eval(expression), 3))
-		output_label.configure(text=expression + " = " + total)
-		expression = ""
+        total = str(round(eval(expression), 3))
+        output_label.configure(text=expression + " = " + total)
+        expression = ""
 
-	except:
-		output_label.configure(text="ERROR")
-		expression = ""
+    except:
+        output_label.configure(text="ERROR")
+        expression = ""
 
 def clear():
-	global expression
+    global expression
 
-	expression = ""
-	output_label.configure(text="Enter the number here...")
+    expression = ""
+    output_label.configure(text="Enter the number here...")
 
 # blank window
 root = Tk()
